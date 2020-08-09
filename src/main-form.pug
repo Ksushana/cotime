@@ -1,0 +1,66 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Форма заявки';
+
+block content
+  .container
+    .line.step1
+    h1.visually-hidden #{title}
+
+    .main-form
+      form
+        textarea.main-form__name(placeholder="Название")
+        .main-form__color
+          input(type="radio" id="lila" name="color" value="lila")
+          label.lila(for="lila")
+          input(type="radio" id="violet" name="color" value="violet")
+          label.violet(for="violet")
+          input(type="radio" id="blue" name="color" value="blue")
+          label.blue(for="blue")
+          input(type="radio" id="lightgreen" name="color" value="lightgreen")
+          label.lightgreen(for="lightgreen")
+          input(type="radio" id="green" name="color" value="green")
+          label.green(for="green")
+          input(type="radio" id="orange" name="color" value="orange")
+          label.orange(for="orange")
+          input(type="radio" id="yellow" name="color" value="yellow")
+          label.yellow(for="yellow")
+        .main-form__inputs
+          input.main-form__discription(type="text" placeholder="Описание")
+          input.main-form__link(type="text" placeholder="Ссылка на онлайн-занятие")
+          p
+            input.main-form__price(type="text" id="price")
+            label.form-label(for="price") Цена
+          p
+            input.main-form__participants(type="number" id="max" min="1")
+            label.form-label(for="max") Максимум участников
+          p.main-form__select.main-form__select--big
+            select.main-form__duration.custom-select(id="duration" name="duration[]")
+              option(value="45") 45 минут
+              option(value="1") 1 час
+              option(value="2") 2 часа
+            label.form-label(for="duration") Длительность
+        .main-form__dates
+          .main-form__date
+            p
+              input.main-form__price(type="text" id="price")
+              label.form-label(for="price") Дата
+            p
+            p
+              input.main-form__price(type="text" id="price")
+              label.form-label(for="price") Время
+            p
+            button.main-form__addtime
+          button.main-form__adddate Добавить дату
+
+
+        .main-form__inputs.main-form__inputs--big
+          p
+            input.main-form__instructor(type="text" id="instructor")
+            label.form-label(for="instructor") Имя и фамилия ведущего
+          input.main-form__tags(type="text"  placeholder="Добавить теги")
+        button.blue-btn(type="submit") Создать
+
+
+

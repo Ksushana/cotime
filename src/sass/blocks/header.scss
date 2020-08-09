@@ -1,0 +1,35 @@
+.header {
+  height: 80px;
+  background-color: $color-white;
+  padding: 31px 41px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.header__account {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 27px;
+  text-align: right;
+  color: $color-black;
+
+  p {
+    margin: 0;
+    padding-right: 23px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-bottom: 1px solid $color-black;
+      border-right: 1px solid $color-black;
+      transform: rotate(45deg);
+      right: 6px;
+      top: 5px;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cotime | Форма заявки</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/MuseoSansCyrl-300.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/MuseoSansCyrl-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/MuseoSansCyrl-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__logo"><img src="img/logo.svg" alt="logo" width="108" height="20"></div>
+    <div class="header__account">
+      <p>Maksimova M.</p>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="line step1"></div>
+      <h1 class="visually-hidden">Форма заявки</h1>
+      <div class="main-form">
+        <form><textarea class="main-form__name" placeholder="Название"></textarea>
+          <div class="main-form__color"><input type="radio" id="lila" name="color" value="lila"><label class="lila" for="lila"></label><input type="radio" id="violet" name="color" value="violet"><label class="violet" for="violet"></label><input type="radio" id="blue" name="color" value="blue"><label class="blue" for="blue"></label><input type="radio" id="lightgreen" name="color" value="lightgreen"><label class="lightgreen" for="lightgreen"></label><input type="radio" id="green" name="color" value="green"><label class="green" for="green"></label><input type="radio" id="orange" name="color" value="orange"><label class="orange" for="orange"></label><input type="radio" id="yellow" name="color" value="yellow"><label class="yellow" for="yellow"></label></div>
+          <div class="main-form__inputs"><input class="main-form__discription" type="text" placeholder="Описание"><input class="main-form__link" type="text" placeholder="Ссылка на онлайн-занятие">
+            <p><input class="main-form__price" type="text" id="price"><label class="form-label" for="price">Цена</label></p>
+            <p><input class="main-form__participants" type="number" id="max" min="1"><label class="form-label" for="max">Максимум участников</label></p>
+            <p class="main-form__select main-form__select--big"><select class="main-form__duration custom-select" id="duration" name="duration[]">
+                <option value="45">45 минут</option>
+                <option value="1">1 час</option>
+                <option value="2">2 часа</option>
+              </select><label class="form-label" for="duration">Длительность</label></p>
+          </div>
+          <div class="main-form__dates">
+            <div class="main-form__date">
+              <p><input class="main-form__price" type="text" id="price"><label class="form-label" for="price">Дата</label></p>
+              <p></p>
+              <p><input class="main-form__price" type="text" id="price"><label class="form-label" for="price">Время</label></p>
+              <p></p><button class="main-form__addtime"></button>
+            </div><button class="main-form__adddate">Добавить дату</button>
+          </div>
+          <div class="main-form__inputs main-form__inputs--big">
+            <p><input class="main-form__instructor" type="text" id="instructor"><label class="form-label" for="instructor">Имя и фамилия ведущего</label></p><input class="main-form__tags" type="text" placeholder="Добавить теги">
+          </div><button class="blue-btn" type="submit">Создать</button></form>
+      </div>
+    </div>
+  </main>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>

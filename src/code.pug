@@ -1,0 +1,21 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Введите код из СМС';
+
+block content
+  .container
+    .line.step2
+    form.phone-form
+      h1 #{title}
+      p Мы отправили 6-значный код на введенный вами номер телефона.
+      .phone-form__code
+        input( type="number" min="0" max="10")
+        input( type="number" min="0" max="10")
+        input( type="number" min="0" max="10")
+        span -
+        input( type="number" min="0" max="10")
+        input( type="number" min="0" max="10")
+        input( type="number" min="0" max="10")
+      button.blue-btn(type="submit") Далее
+      button(type="submit") Назад

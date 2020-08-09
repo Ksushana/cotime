@@ -1,0 +1,269 @@
+.main-form {
+  background-color: $color-white;
+  padding: 0 55px 74px;
+  margin: 0 auto;
+  width: 800px;
+  margin-top: 37px;
+  margin-bottom: 74px;
+
+  select {
+    display: none;
+  }
+
+  button {
+    margin-top: 50px;
+  }
+}
+
+.main-form__name {
+  width: calc(100% + 110px);
+  height: 349px;
+  margin-left: -55px;
+  background-color: $color-dark-grey;
+  padding: 47px 60px;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 65px;
+  color: $color-text-grey;
+  text-align: bottom;
+  resize: none;
+  border: none;
+}
+
+.main-form__color {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 9px;
+
+  input {
+    display: none;
+  }
+
+  label {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin-right: 3px;
+    display: block;
+
+    &.lila {
+      background-color: $color-lila;
+    }
+    &.violet {
+      background-color: $color-violet;
+    }
+    &.blue {
+      background-color: $color-blue;
+    }
+    &.lightgreen {
+      background-color: $color-lightgreen;
+    }
+    &.green {
+      background-color: $color-green;
+    }
+    &.orange {
+      background-color: $color-orange;
+    }
+    &.yellow {
+      background-color: $color-yellow;
+    }
+  }
+
+  input:checked + label {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 24px;
+      height: 24px;
+      background-color: $color-white;
+      border-radius: 50%;
+      top: calc(50% - 12px);
+      left: calc(50% - 12px);
+    }
+  }
+}
+
+.main-form__inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  p {
+    margin: 0;
+    position: relative;
+    margin-top: 38px;
+  }
+
+  &--big {
+    p {
+      width: 100%;
+    }
+  }
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+.main-form__discription,
+.main-form__link,
+.main-form__instructor,
+.main-form__tags {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid $color-border-grey;
+  margin-top: 60px;
+}
+
+.main-form__discription::placeholder,
+.main-form__link::placeholder {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.main-form__price,
+.main-form__participants,
+.main-form__duration {
+  width: 200px;
+  border-bottom: 1px solid $color-border-grey;
+  margin-top: 29px;
+  padding-bottom: 6px;
+}
+
+.main-form__instructor {
+  margin-top: 35px;
+}
+
+.form-label {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-text-grey;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main-form__select {
+  &--big {
+    width: 200px;
+  }
+
+  span.select2 {
+    border-bottom: 1px solid #ced3de;
+    margin-top: 25px;
+    display: block;
+    padding-bottom: 6px;
+  }
+
+  .select2-container--default .select2-selection--single {
+    border: none;
+    outline: none;
+  }
+
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    color: $color-black;
+    padding: 0;
+  }
+
+  .select2-selection__arrow {
+    display: none;
+  }
+}
+
+.select2-dropdown {
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.select2-search--dropdown {
+  display: none;
+}
+
+.select2-results__option {
+  height: 49px;
+  color: $color-black;
+  padding: 14px 8px 15px 20px;
+
+  &:hover {
+    color: $color-black;
+    background-color: $color-lightblue;
+  }
+}
+
+.select2-container--default
+  .select2-results__option--highlighted[aria-selected] {
+  color: $color-black;
+  background-color: $color-lightblue;
+}
+
+.main-form__date {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-form__addtime {
+  width: 61px;
+  height: 61px;
+  background-color: $color-btn-bg-grey;
+  position: relative;
+  border: none;
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 1px;
+    background-color: $color-btn-blue;
+    top: 50%;
+    left: calc(50% - 7px);
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 14px;
+    background-color: $color-btn-blue;
+    right: 50%;
+    top: calc(50% - 7px);
+  }
+
+  &:hover {
+    background-color: $color-lightblue;
+  }
+
+  .disabled {
+    background-color: $color-btn-bg-grey;
+    pointer-events: none;
+
+    &:after,
+    &:before {
+      background-color: $color-text-grey;
+    }
+  }
+}
+
+.main-form__adddate {
+  border: none;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  color: $color-btn-blue;
+  background-color: $color-white;
+}
