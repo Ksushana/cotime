@@ -3,6 +3,7 @@
   height: 5px;
   background-color: rgba($color-black, 0.04);
   position: relative;
+  margin-bottom: 100px;
 
   &::before {
     position: absolute;
@@ -15,6 +16,14 @@
   }
 
   &.step1::before {
-    width: 411px;
+    width: 29%;
+  }
+
+  &.step2::before {
+    width: 71.4%;
+  }
+
+  &.step3::before {
+    width: 85.7%;
   }
 }

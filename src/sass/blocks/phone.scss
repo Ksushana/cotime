@@ -1,0 +1,94 @@
+.phone-form {
+  width: 600px;
+  margin: auto;
+  background-color: $color-white;
+  padding: 58px 80px 64px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  &--code {
+    padding-top: 67px;
+  }
+
+  h1 {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    color: $color-black;
+    letter-spacing: 0.6px;
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-top: 22px;
+    margin-bottom: 42px;
+    letter-spacing: 0.2px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    color: $color-text-grey;
+  }
+
+  input {
+    height: 44px;
+    padding: 7px 0;
+    border-bottom: 1px solid $color-border-grey;
+    margin-bottom: 48px;
+  }
+
+  .button-link {
+    margin: 22px auto 0;
+  }
+}
+
+.phone-form__code {
+  display: flex;
+  margin-top: 4px;
+  margin-bottom: 2px;
+
+  input {
+    width: 65px;
+    height: 84px;
+    border: 1px solid $color-border-grey;
+    font-size: 46px;
+    line-height: 46px;
+    text-align: center;
+
+    &:nth-of-type(2),
+    &:nth-of-type(5) {
+      border-right: 0;
+      border-left: 0;
+    }
+
+    &:focus {
+      border-color: $color-btn-blue;
+    }
+
+    &:focus:nth-of-type(2),
+    &:focus:nth-of-type(5) {
+      border-right: 1px solid $color-blue;
+      border-left: 1px solid $color-blue;
+    }
+  }
+
+  span {
+    padding: 32px 20px 0;
+    display: block;
+    height: 84px;
+  }
+}
+
+p.phone-form-note {
+  text-align: center;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  color: $color-text-grey;
+  margin-top: 39px;
+  margin-bottom: 0;
+
+  a {
+    color: $color-black;
+  }
+}

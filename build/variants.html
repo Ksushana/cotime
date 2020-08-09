@@ -22,20 +22,23 @@
     <div class="container">
       <div class="line step3"></div>
       <form class="var-form">
-        <h1 class="visually-hidden">Варианты использования</h1>
-        <div class="var-form__inputs"><input type="radio" id="Hobby" name="variants" value="Hobby"><label for="Hobby">
-            <h2>Hobby</h2>
-            <p>Бесплатно</p>
-            <p>Создание индивидуальных сессий и 2 приема платежей в месяц</p>
-          </label><input type="radio" id="Part" name="variants" value="Part"><label for="Part">
-            <h2>Part time</h2>
-            <p>999 р.</p>
-            <p>Все возможности приема платежей,  5.9% от суммы</p>
-          </label><input type="radio" id="Business" name="variants" value="Business"><label for="Business">
-            <h2>Business</h2>
-            <p>1999 р.</p>
-            <p>Все возможности приема платежей,  2.9% от суммы</p>
-          </label></div>
+        <div class="var-form__inner">
+          <h1>Варианты использования</h1>
+          <div class="var-form__inputs"><input type="radio" id="Hobby" name="variants" value="Hobby" checked><label for="Hobby">
+              <h2>Hobby</h2>
+              <p class="var-form__price">Бесплатно</p>
+              <p class="var-form__disc">Создание индивидуальных сессий и 2 приема платежей в&nbsp;месяц</p>
+            </label><input type="radio" id="Part" name="variants" value="Part"><label for="Part">
+              <h2>Part time</h2>
+              <p class="var-form__price">999 р.</p>
+              <p class="var-form__disc">Все возможности приема платежей, 5.9%&nbsp;от суммы</p>
+            </label><input type="radio" id="Business" name="variants" value="Business"><label for="Business">
+              <h2>Business</h2>
+              <p class="var-form__price">1999 р.</p>
+              <p class="var-form__disc">Все возможности приема платежей, 2.9%&nbsp;от суммы</p>
+            </label></div><button class="var-form__compare button-link" type="button">Сравнить тарифы</button><input type="checkbox" id="want"><label class="var-form__individual" for="want">Хочу индивидуальный вариант с выделенным специалистом технической поддержки</label><button class="blue-btn" type="submit">Далее</button>
+          <p class="var-form__note">31 октября мы зарелизим систему тарифов. <br>Уже сейчас действует тариф FREE. Вы подписаны на него. <br>В рамках этого тарифа с 31 октября вы&nbsp;сможете&nbsp;принимать&nbsp;бесплатно два&nbsp;платежа&nbsp;в&nbsp;месяц&nbsp;на&nbsp;сумму&nbsp;до&nbsp;<span>4&nbsp;999&nbsp;рублей</span>.</p>
+        </div>
       </form>
     </div>
   </main>

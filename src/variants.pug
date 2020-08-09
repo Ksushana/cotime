@@ -6,25 +6,28 @@ block variables
 block content
   .container
     .line.step3
+
     form.var-form
-      h1 #{title}
-      .var-form__inputs
-        input(type="radio" id="Hobby" name="variants" value="Hobby")
-        label(for="Hobby")
-          h2 Hobby
-          p Бесплатно
-          p Создание индивидуальных сессий и 2 приема платежей в месяц
-        input(type="radio" id="Part" name="variants" value="Part")
-        label(for="Part")
-          h2 Part time
-          p 999 р.
-          p Все возможности приема платежей,  5.9% от суммы
-        input(type="radio" id="Business" name="variants" value="Business")
-        label(for="Business")
-          h2 Business
-          p 1999 р.
-          p Все возможности приема платежей,  2.9% от суммы
-      button(type="button") Сравнить тарифы
-      input(type="checkbox") Хочу индивидуальный вариант с выделенным специалистом технической поддержки
-      button.blue-btn(type="submit") Далее
-      p 31 октября мы зарелизим систему тарифов.  Уже сейчас действует тариф FREE. Вы подписаны на него.  В рамках этого тарифа с 31 октября вы сможете принимать бесплатно  два платежа в месяц на сумму до <span>4 999 рублей</span>.
+      .var-form__inner
+        h1 #{title}
+        .var-form__inputs
+          input(type="radio" id="Hobby" name="variants" value="Hobby" checked)
+          label(for="Hobby")
+            h2 Hobby
+            p.var-form__price Бесплатно
+            p.var-form__disc Создание индивидуальных сессий и 2 приема платежей в&nbsp;месяц
+          input(type="radio" id="Part" name="variants" value="Part")
+          label(for="Part")
+            h2 Part time
+            p.var-form__price 999 р.
+            p.var-form__disc Все возможности приема платежей, 5.9%&nbsp;от суммы
+          input(type="radio" id="Business" name="variants" value="Business")
+          label(for="Business")
+            h2 Business
+            p.var-form__price 1999 р.
+            p.var-form__disc Все возможности приема платежей, 2.9%&nbsp;от суммы
+        button.var-form__compare.button-link(type="button") Сравнить тарифы
+        input(type="checkbox" id="want")
+        label.var-form__individual(for="want") Хочу индивидуальный вариант с выделенным специалистом технической поддержки
+        button.blue-btn(type="submit") Далее
+        p.var-form__note 31 октября мы зарелизим систему тарифов. <br>Уже сейчас действует тариф FREE. Вы подписаны на него. <br>В рамках этого тарифа с 31 октября вы&nbsp;сможете&nbsp;принимать&nbsp;бесплатно два&nbsp;платежа&nbsp;в&nbsp;месяц&nbsp;на&nbsp;сумму&nbsp;до&nbsp;<span>4&nbsp;999&nbsp;рублей</span>.

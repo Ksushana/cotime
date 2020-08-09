@@ -21,10 +21,11 @@
   <main>
     <div class="container">
       <div class="line step2"></div>
-      <form class="phone-form">
+      <form class="phone-form phone-form--code">
         <h1>Введите код из СМС</h1>
         <p>Мы отправили 6-значный код на введенный вами номер телефона.</p>
-        <div class="phone-form__code"><input type="number" min="0" max="10"><input type="number" min="0" max="10"><input type="number" min="0" max="10"><span>-</span><input type="number" min="0" max="10"><input type="number" min="0" max="10"><input type="number" min="0" max="10"></div><button class="blue-btn" type="submit">Далее</button><button type="submit">Назад</button>
+        <div class="phone-form__code"><input id="code" type="text" onkeyup="testJump(this);" maxlength="1" size="1" autofocus><input id="code" type="text" onkeyup="testJump(this);" maxlength="1" size="1"><input id="code" type="text" onkeyup="testJump(this);" maxlength="1" size="1"><span>	&#8211;</span><input id="code" type="text" onkeyup="testJump(this);" maxlength="1" size="1"><input id="code" type="text" onkeyup="testJump(this);" maxlength="1" size="1"><input id="code" type="text" onkeyup="testJump(this);" maxlength="1" size="1"></div><button class="blue-btn" type="submit">Далее</button><button class="button-link" type="submit">Отправить на другой номер</button>
+        <p class="phone-form-note">Нажимая «Далее», вы подписываете <a href="#">договор использования</a> сервиса Cotime</p>
       </form>
     </div>
   </main>
