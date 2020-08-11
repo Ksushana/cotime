@@ -417,8 +417,12 @@ input {
     line-height: 27px;
     color: #a2aabd;
     z-index: 10000;
-    opacity: 0;
+    opacity: 1;
     pointer-events: none;
+
+    &--hidden {
+      opacity: 0;
+    }
 
     a {
       color: #3773e0;

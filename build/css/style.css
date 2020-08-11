@@ -3735,8 +3735,12 @@ input {
   line-height: 27px;
   color: #a2aabd;
   z-index: 10000;
-  opacity: 0;
+  opacity: 1;
   pointer-events: none;
+}
+
+.main-form__part-input .tooltip--hidden {
+  opacity: 0;
 }
 
 .main-form__part-input .tooltip a {
