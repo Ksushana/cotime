@@ -19013,9 +19013,9 @@ var widgetsTooltip = $.ui.tooltip;
 
 $(function () {});
 
-document.getElementById("copyButton").addEventListener("click", function () {
-  copyToClipboard(document.getElementById("copyTarget"));
-});
+// document.getElementById("copyButton").addEventListener("click", function () {
+//   copyToClipboard(document.getElementById("copyTarget"));
+// });
 
 function copyToClipboard(elem) {
   var targetId = "_hiddenCopyText_";
@@ -19083,6 +19083,23 @@ function testJump(x) {
     }
   }
 }
+
+$(function () {
+  const mainForm = $(".main-form");
+  if (!mainForm.length) {
+    return;
+  }
+
+  const nameInput = mainForm.find(".main-form__name");
+  const buttons = mainForm.find(".main-form__color label");
+
+  buttons.on("click", (evt) => {
+    const target = evt.target;
+    const button = $(target);
+    const color = button.css("background-color");
+    nameInput.css("background-color", color);
+  });
+});
 
 $(".subscribe-popup").dialog({
   autoOpen: true,

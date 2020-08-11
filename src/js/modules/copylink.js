@@ -1,6 +1,6 @@
-document.getElementById("copyButton").addEventListener("click", function () {
-  copyToClipboard(document.getElementById("copyTarget"));
-});
+// document.getElementById("copyButton").addEventListener("click", function () {
+//   copyToClipboard(document.getElementById("copyTarget"));
+// });
 
 function copyToClipboard(elem) {
   var targetId = "_hiddenCopyText_";
