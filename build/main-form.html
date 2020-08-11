@@ -17,6 +17,7 @@
     <div class="header__account">
       <p>Maksimova M.</p>
     </div>
+    <div class="header__kebab"></div>
   </header>
   <main>
     <div class="container">
@@ -26,24 +27,26 @@
         <form><textarea class="main-form__name" placeholder="Название"></textarea>
           <div class="main-form__color"><input type="radio" id="lila" name="color" value="lila"><label class="lila" for="lila"></label><input type="radio" id="violet" name="color" value="violet"><label class="violet" for="violet"></label><input type="radio" id="blue" name="color" value="blue"><label class="blue" for="blue"></label><input type="radio" id="lightgreen" name="color" value="lightgreen"><label class="lightgreen" for="lightgreen"></label><input type="radio" id="green" name="color" value="green"><label class="green" for="green"></label><input type="radio" id="orange" name="color" value="orange"><label class="orange" for="orange"></label><input type="radio" id="yellow" name="color" value="yellow"><label class="yellow" for="yellow"></label></div>
           <div class="main-form__inputs"><input class="main-form__discription" type="text" placeholder="Описание"><input class="main-form__link" type="text" placeholder="Ссылка на онлайн-занятие">
-            <p><input class="main-form__price" type="text" id="price"><label class="form-label" for="price">Цена</label></p>
-            <p><input class="main-form__participants" type="number" id="max" min="1"><label class="form-label" for="max">Максимум участников</label></p>
-            <p class="main-form__select main-form__select--big"><select class="main-form__duration custom-select" id="duration" name="duration[]">
+            <div class="main-form__input"><input class="main-form__price" type="text" id="price"><label class="form-label price-label" for="price">Цена</label></div>
+            <div class="main-form__part-input main-form__input"><input class="main-form__participants" type="number" id="max" min="1"><label class="form-label" for="max">Максимум участников</label>
+              <div class="tooltip">
+                <p>Групповые занятия доступны с тарифами <a href="#">BASIC</a> и <a href="#">PRO</a>. Для индивидуальных занятий оформление онлайн-занятия бесплатно .</p><button type="button">Понятно</button>
+              </div>
+            </div>
+            <div class="main-form__select main-form__select--big main-form__input"><select class="main-form__duration custom-select" id="duration" name="duration[]">
                 <option value="45">45 минут</option>
                 <option value="1">1 час</option>
                 <option value="2">2 часа</option>
-              </select><label class="form-label" for="duration">Длительность</label></p>
+              </select><label class="form-label" for="duration">Длительность</label></div>
           </div>
           <div class="main-form__dates">
             <div class="main-form__date">
-              <p><input class="main-form__price" type="text" id="price"><label class="form-label" for="price">Дата</label></p>
-              <p></p>
-              <p><input class="main-form__price" type="text" id="price"><label class="form-label" for="price">Время</label></p>
-              <p></p><button class="main-form__addtime"></button>
+              <div class="main-form__input"><input type="text" id="date"><label class="form-label" for="date">Дата</label></div>
+              <div class="main-form__input"><input type="text" id="time"><label class="form-label" for="time">Время</label></div><button class="main-form__addtime"></button>
             </div><button class="main-form__adddate button-link">Добавить дату</button>
           </div>
           <div class="main-form__inputs main-form__inputs--big">
-            <p><input class="main-form__instructor" type="text" id="instructor"><label class="form-label" for="instructor">Имя и фамилия ведущего</label></p><input class="main-form__tags" type="text" placeholder="Добавить теги">
+            <div class="main-form__input"><input class="main-form__instructor" type="text" id="instructor"><label class="form-label" for="instructor">Имя и фамилия ведущего</label></div><input class="main-form__tags" type="text" placeholder="Добавить теги">
           </div><button class="blue-btn" type="submit">Создать</button></form>
       </div>
     </div>

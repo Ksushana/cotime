@@ -1,8 +1,8 @@
 {
-  "name": "9sense",
+  "name": "Cotime",
   "version": "1.0.0",
   "private": true,
-  "description": "9sense",
+  "description": "Cotime",
   "devDependencies": {
     "autoprefixer": "^9.6.0",
     "browser-sync": "^2.26.7",

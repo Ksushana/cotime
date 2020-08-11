@@ -7,29 +7,47 @@ block content
   .container
     .event
       h1 #{title}
+      .event__block
+        .event__discription
+          .event__discription-header
+            .event__discription-photo
+              span AC
+            .event__discription-lead
+              p.event__discription-name Екатерина Пылаева
+              p.event__discription-text GLP Feedback
+              p.event__discription-text GLP Feedback
+          .event__discription-body
+            p Идея в том, чтобы ощутить детально, как при движении тело создает волну, задействуя все двигательные части, и научиться управлять ею, делая эту волну более амплитудной или совсем незаметной. Для этого надо чтобы все суставы в теле были подвижны во всех возможных направлениях и имели связи друг с другом, причем чем легче и мягче будут связи, тем плавнее будет волна.
 
-      .event__discription
-        .event__discription-header
-          .event__discription-photo
-          .event__discription-lead
-            p.event__discription-name Екатерина Пылаева
-            p.event__discription-text GLP Feedback
-            p.event__discription-text GLP Feedback
-        .event__discription-body
-          p Идея в том, чтобы ощутить детально, как при движении тело создает волну, задействуя все двигательные части, и научиться управлять ею, делая эту волну более амплитудной или совсем незаметной. Для этого надо чтобы все суставы в теле были подвижны во всех возможных направлениях и имели связи друг с другом, причем чем легче и мягче будут связи, тем плавнее будет волна.
+        .event__subscribe
+          form(action="post")
+            input(type="radio" id="24" name="date" value="24")
+            label(for="24")
+              span.date 24 июня
+              span.time 19:00
+            input(type="radio" id="25" name="date" value="25")
+            label(for="25")
+              span.date 25 июня
+              span.time 19:00
+            input(type="radio" id="26" name="date" value="26")
+            label(for="26")
+              span.date 26 июня
+              span.time 19:00
+            p Длительность – 2 часа
+            button.blue-btn(type="submit") Записаться
+  .popup.subscribe-popup.magnificPopup
+    .subscribe-popup__block
+      h2 Поздравляем, занятие создано
+      p.subscribe-popup__share Вот вам кнопка для шаринга
+      form.subscribe-popup__link
+        input(type="text" id="copyTarget" value="http://cotime.io/aukdfj" )
+        button( id="copyButton" ) Скопировать ссылку
+      p.subscribe-popup__share Отправьте ссылку на адреса электронной почты
+      .subscribe-popup__send-link
+        input(type="email" placeholder="+ Email")
+        button.blue-btn.disabled(type="submit") Отправить
 
-      .event__subscribe
-        form(action="post")
-          input(type="radio" id="24" name="date" value="24")
-          label(for="24")
-          input(type="radio" id="25" name="date" value="25")
-          label(for="25")
-          input(type="radio" id="26" name="date" value="26")
-          label(for="26")
-          p Длительность – 2 часа
-          button.blue-btn(type="submit") Записаться
-        .popup.subscribe-popup
-          h2 Поздравляем, занятие создано
-          p Вот вам кнопка для шаринга
+
+
 
 

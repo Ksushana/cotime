@@ -29,13 +29,16 @@ block content
         .main-form__inputs
           input.main-form__discription(type="text" placeholder="Описание")
           input.main-form__link(type="text" placeholder="Ссылка на онлайн-занятие")
-          p
+          div.main-form__input
             input.main-form__price(type="text" id="price")
-            label.form-label(for="price") Цена
-          p
+            label.form-label.price-label(for="price") Цена
+          div.main-form__part-input.main-form__input
             input.main-form__participants(type="number" id="max" min="1")
             label.form-label(for="max") Максимум участников
-          p.main-form__select.main-form__select--big
+            div.tooltip
+              p Групповые занятия доступны с тарифами <a href="#">BASIC</a> и <a href="#">PRO</a>. Для индивидуальных занятий оформление онлайн-занятия бесплатно .
+              button(type="button") Понятно
+          div.main-form__select.main-form__select--big.main-form__input
             select.main-form__duration.custom-select(id="duration" name="duration[]")
               option(value="45") 45 минут
               option(value="1") 1 час
@@ -43,20 +46,20 @@ block content
             label.form-label(for="duration") Длительность
         .main-form__dates
           .main-form__date
-            p
-              input.main-form__price(type="text" id="price")
-              label.form-label(for="price") Дата
-            p
-            p
-              input.main-form__price(type="text" id="price")
-              label.form-label(for="price") Время
-            p
+            div.main-form__input
+              input(type="text" id="date")
+              label.form-label(for="date") Дата
+            div.main-form__input
+
+              input(type="text" id="time")
+              label.form-label(for="time") Время
+
             button.main-form__addtime
           button.main-form__adddate.button-link Добавить дату
 
 
         .main-form__inputs.main-form__inputs--big
-          p
+          div.main-form__input
             input.main-form__instructor(type="text" id="instructor")
             label.form-label(for="instructor") Имя и фамилия ведущего
           input.main-form__tags(type="text"  placeholder="Добавить теги")

@@ -5,6 +5,10 @@
   position: relative;
   margin-bottom: 100px;
 
+  @include mobile {
+    margin-bottom: 0;
+  }
+
   &::before {
     position: absolute;
     content: "";

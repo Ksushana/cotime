@@ -6,6 +6,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @include mobile {
+    height: 60px;
+    padding: 18px 21px;
+  }
 }
 
 .header__account {
@@ -14,6 +19,10 @@
   line-height: 27px;
   text-align: right;
   color: $color-black;
+
+  @include mobile {
+    display: none;
+  }
 
   p {
     margin: 0;
@@ -30,6 +39,41 @@
       transform: rotate(45deg);
       right: 6px;
       top: 5px;
+    }
+  }
+}
+
+.header__kebab {
+  display: none;
+
+  @include mobile {
+    display: block;
+    position: relative;
+    width: 6px;
+    height: 6px;
+    background: #a2aabd;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-top: 9px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: #a2aabd;
+      border-radius: 50%;
+    }
+
+    &::before {
+      top: 0;
+      left: -9px;
+    }
+
+    &::after {
+      top: 0;
+      right: -9px;
     }
   }
 }

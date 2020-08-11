@@ -6,12 +6,72 @@
   margin-top: 37px;
   margin-bottom: 74px;
 
+  @include mobile {
+    width: 100%;
+    margin-top: 0;
+    padding: 0 20px 74px;
+    margin-bottom: 0;
+  }
+
   select {
     display: none;
   }
 
+  input {
+    transition: border 0.4s;
+
+    &.disabled {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+  }
+
+  input:focus {
+    border-bottom: 1px solid $color-btn-blue;
+  }
+
   button {
-    margin-top: 50px;
+    margin-top: 41px;
+
+    @include mobile {
+      margin-top: 45px;
+    }
+  }
+
+  .blue-btn {
+    @include mobile {
+      margin-top: 36px;
+    }
+  }
+
+  &__date {
+    .main-form__input {
+      position: relative;
+      margin-top: 42px;
+      input {
+        width: 120px;
+        padding: 0 0 6px;
+        margin-right: 30px;
+        border-bottom: 1px solid $color-border-grey;
+        margin-top: 29px;
+        padding-bottom: 6px;
+
+        @include mobile {
+          margin-right: 28px;
+          padding-bottom: 13px;
+        }
+
+        &#time {
+          width: 90px;
+          margin-right: 20px;
+
+          @include mobile {
+            width: 59px;
+            margin-right: 13px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -28,12 +88,26 @@
   text-align: bottom;
   resize: none;
   border: none;
+
+  @include mobile {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    padding: 20px;
+    height: 206px;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+  }
 }
 
 .main-form__color {
   display: flex;
   margin-top: 20px;
   margin-bottom: 9px;
+
+  @include mobile {
+    margin-top: 17px;
+  }
 
   input {
     display: none;
@@ -45,6 +119,12 @@
     border-radius: 50%;
     margin-right: 3px;
     display: block;
+
+    @include mobile {
+      width: 36px;
+      height: 36px;
+      margin-right: 4px;
+    }
 
     &.lila {
       background-color: $color-lila;
@@ -90,15 +170,24 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
-  p {
+  @include mobile {
+    margin-top: -24px;
+  }
+
+  .main-form__input {
     margin: 0;
     position: relative;
     margin-top: 38px;
+
+    @include mobile {
+      margin-top: 44px;
+    }
   }
 
   &--big {
-    p {
+    .main-form__input {
       width: 100%;
+      margin-top: 26px;
     }
   }
 }
@@ -110,13 +199,24 @@ input {
 
 .main-form__discription,
 .main-form__link,
-.main-form__instructor,
-.main-form__tags {
+.main-form__instructor {
   width: 100%;
   height: 40px;
   border: none;
   border-bottom: 1px solid $color-border-grey;
   margin-top: 60px;
+
+  @include mobile {
+  }
+}
+
+.main-form__tags {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid $color-border-grey;
+  margin-top: 50px;
+  margin-bottom: 7px;
 }
 
 .main-form__discription::placeholder,
@@ -124,6 +224,10 @@ input {
   font-weight: 300;
   font-size: 20px;
   line-height: 30px;
+
+  @include mobile {
+    font-size: 17px;
+  }
 }
 
 .main-form__price,
@@ -136,7 +240,7 @@ input {
 }
 
 .main-form__instructor {
-  margin-top: 35px;
+  margin-top: 22px;
 }
 
 .form-label {
@@ -151,6 +255,25 @@ input {
   position: absolute;
   top: 0;
   left: 0;
+
+  &.price-label {
+    width: fit-content;
+    &::after {
+      content: "?";
+      position: absolute;
+      color: $color-white;
+      font-size: 11px;
+      line-height: 11px;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: #a2aabd;
+      padding: 3px 5px;
+      box-sizing: border-box;
+      right: -22px;
+      bottom: 0;
+    }
+  }
 }
 
 .main-form__select {
@@ -178,6 +301,10 @@ input {
     line-height: 30px;
     color: $color-black;
     padding: 0;
+
+    @include mobile {
+      font-size: 17px;
+    }
   }
 
   .select2-selection__arrow {
@@ -215,14 +342,33 @@ input {
 .main-form__date {
   display: flex;
   flex-wrap: wrap;
+
+  @include mobile {
+    margin-top: -6px;
+  }
+}
+
+.main-form__adddate {
+  margin-top: 16px !important;
+
+  @include mobile {
+    font-size: 17px;
+    margin-top: 14px !important;
+    padding-left: 0;
+    margin-bottom: 38px;
+  }
 }
 
 .main-form__addtime {
-  width: 61px;
-  height: 61px;
+  width: 60px;
+  height: 60px;
   background-color: $color-btn-bg-grey;
   position: relative;
   border: none;
+
+  @include mobile {
+    margin-top: 45px;
+  }
 
   &:before {
     position: absolute;
@@ -255,6 +401,37 @@ input {
     &:after,
     &:before {
       background-color: $color-text-grey;
+    }
+  }
+}
+
+.main-form__part-input {
+  .tooltip {
+    position: absolute;
+    width: 299px;
+    background: $color-white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 25px;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 27px;
+    color: #a2aabd;
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: none;
+
+    a {
+      color: #3773e0;
+    }
+
+    button {
+      background-color: $color-white;
+      border: none;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 25px;
+      text-align: center;
+      color: #3773e0;
     }
   }
 }
