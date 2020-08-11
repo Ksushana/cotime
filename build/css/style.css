@@ -3283,6 +3283,11 @@ a {
   }
 }
 
+.main-form .blue-btn:disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
 @media (max-width: 799px) {
   .main-form .blue-btn {
     margin-top: 36px;

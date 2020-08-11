@@ -39,6 +39,11 @@
   }
 
   .blue-btn {
+    &:disabled {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
     @include mobile {
       margin-top: 36px;
     }

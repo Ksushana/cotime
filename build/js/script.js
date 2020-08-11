@@ -19091,8 +19091,8 @@ $(function () {
   }
 
   const nameInput = mainForm.find(".main-form__name");
-  const colorButtons = mainForm.find(".main-form__color label");
 
+  const colorButtons = mainForm.find(".main-form__color label");
   colorButtons.on("click", (evt) => {
     const target = evt.target;
     const button = $(target);
@@ -19141,6 +19141,46 @@ $(function () {
     evt.preventDefault();
     addDate();
   });
+
+  const allInputs = mainForm.find("input,textarea,select");
+  // const descriptionInput = mainForm.find(".main-form__discription");
+  // const priceInput = mainForm.find(".main-form__price");
+  const submitButton = mainForm.find("[type='submit']");
+
+  const validate = () => {
+    if (!nameInput[0].value) {
+      return false;
+    }
+    // if (!descriptionInput[0].value) {
+    //   return false;
+    // }
+    // if (!priceInput[0].value) {
+    //   return false;
+    // }
+    // if (!participantsInput[0].value) {
+    //   return false;
+    // }
+    return true;
+  };
+
+  const enableForm = () => {
+    submitButton.prop("disabled", false);
+  };
+
+  const disableForm = () => {
+    submitButton.prop("disabled", true);
+  };
+
+  const handleFormChange = () => {
+    if (validate()) {
+      enableForm();
+    } else {
+      disableForm();
+    }
+  };
+
+  allInputs.on("change", handleFormChange);
+  allInputs.on("input", handleFormChange);
 });
 
 $(".subscribe-popup").dialog({
