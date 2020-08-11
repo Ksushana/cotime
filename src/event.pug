@@ -38,16 +38,16 @@ block content
   .popup.subscribe-popup.magnificPopup
     .subscribe-popup__block
       h2 Поздравляем, занятие создано
-      p.subscribe-popup__share Вот вам кнопка для шаринга
-      form.subscribe-popup__link
-        input(type="text" id="copyTarget" value="http://cotime.io/aukdfj" )
-        button( id="copyButton" ) Скопировать ссылку
-      p.subscribe-popup__share Отправьте ссылку на адреса электронной почты
-      .subscribe-popup__send-link
-        input(type="email" placeholder="+ Email")
-        button.blue-btn.disabled(type="submit") Отправить
-
-
-
-
-
+      form.subscribe-form
+        template
+          .subscribe-form__email
+            p 123
+        p.subscribe-popup__share Вот вам кнопка для шаринга
+        .subscribe-popup__link
+          input(type="text" id="copyTarget" value="http://cotime.io/aukdfj" )
+          button( id="copyButton" ) Скопировать ссылку
+        p.subscribe-popup__share Отправьте ссылку на адреса электронной почты
+        .subscribe-popup__send-link
+          input(type="email" placeholder="+ Email")
+          button.blue-btn(type="submit" disabled) Отправить
+        .subscribe-form__emails

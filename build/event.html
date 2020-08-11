@@ -48,10 +48,17 @@
     <div class="popup subscribe-popup magnificPopup">
       <div class="subscribe-popup__block">
         <h2>Поздравляем, занятие создано</h2>
-        <p class="subscribe-popup__share">Вот вам кнопка для шаринга</p>
-        <form class="subscribe-popup__link"><input type="text" id="copyTarget" value="http://cotime.io/aukdfj"><button id="copyButton">Скопировать ссылку</button></form>
-        <p class="subscribe-popup__share">Отправьте ссылку на адреса электронной почты</p>
-        <div class="subscribe-popup__send-link"><input type="email" placeholder="+ Email"><button class="blue-btn disabled" type="submit">Отправить</button></div>
+        <form class="subscribe-form"><template>
+            <div class="subscribe-form__email">
+              <p>123</p>
+            </div>
+          </template>
+          <p class="subscribe-popup__share">Вот вам кнопка для шаринга</p>
+          <div class="subscribe-popup__link"><input type="text" id="copyTarget" value="http://cotime.io/aukdfj"><button id="copyButton">Скопировать ссылку</button></div>
+          <p class="subscribe-popup__share">Отправьте ссылку на адреса электронной почты</p>
+          <div class="subscribe-popup__send-link"><input type="email" placeholder="+ Email"><button class="blue-btn" type="submit" disabled>Отправить</button></div>
+          <div class="subscribe-form__emails"></div>
+        </form>
       </div>
     </div>
   </main>
