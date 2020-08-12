@@ -68,6 +68,10 @@ a {
   }
 }
 
+button {
+  outline: none;
+}
+
 .blue-btn {
   width: 100%;
   height: 60px;
@@ -108,4 +112,36 @@ a {
   @include mobile {
     font-size: 17px;
   }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  background: none;
+}
+
+input[type="time"]::-webkit-clear-button {
+  -webkit-appearance: none;
+}
+
+@-webkit-keyframes autofill {
+  to {
+    color: inherit;
+    background: transparent;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
 }

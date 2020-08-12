@@ -27,8 +27,8 @@
         <form><textarea class="main-form__name" placeholder="Название"></textarea>
           <div class="main-form__color"><input type="radio" id="lila" name="color" value="lila"><label class="lila" for="lila"></label><input type="radio" id="violet" name="color" value="violet"><label class="violet" for="violet"></label><input type="radio" id="blue" name="color" value="blue"><label class="blue" for="blue"></label><input type="radio" id="lightgreen" name="color" value="lightgreen"><label class="lightgreen" for="lightgreen"></label><input type="radio" id="green" name="color" value="green"><label class="green" for="green"></label><input type="radio" id="orange" name="color" value="orange"><label class="orange" for="orange"></label><input type="radio" id="yellow" name="color" value="yellow"><label class="yellow" for="yellow"></label></div>
           <div class="main-form__inputs"><input class="main-form__discription" type="text" placeholder="Описание"><input class="main-form__link" type="text" placeholder="Ссылка на онлайн-занятие">
-            <div class="main-form__input"><input class="main-form__price" type="text" id="price"><label class="form-label price-label" for="price">Цена</label></div>
-            <div class="main-form__part-input main-form__input"><input class="main-form__participants" type="number" id="max" min="1"><label class="form-label" for="max">Максимум участников</label>
+            <div class="main-form__input"><input class="main-form__price" type="text" id="price" autocomplete="off"><label class="form-label price-label" for="price">Цена</label></div>
+            <div class="main-form__part-input main-form__input"><input class="main-form__participants" type="number" id="max" min="1" autocomplete="off"><label class="form-label" for="max">Максимум участников</label>
               <div class="tooltip tooltip--hidden">
                 <p>Групповые занятия доступны с тарифами <a href="#">BASIC</a> и <a href="#">PRO</a>. Для индивидуальных занятий оформление онлайн-занятия бесплатно .</p><button type="button">Понятно</button>
               </div>
@@ -40,20 +40,20 @@
               </select><label class="form-label" for="duration">Длительность</label></div>
           </div>
           <div class="main-form__dates-block"><template class="time">
-              <div class="main-form__input"><input type="text"><label class="form-label">Время</label></div>
+              <div class="main-form__input"><input class="timepicker" type="time" autocomplete="off" placeholder=""><label class="form-label">Время</label></div>
             </template><template class="date">
               <div class="main-form__date">
-                <div class="main-form__input"><input type="text"><label class="form-label">Дата</label></div>
+                <div class="main-form__input"><input class="datepicker" type="text" autocomplete="off"><label class="form-label">Дата</label></div>
                 <div class="main-form__date-times">
-                  <div class="main-form__input"><input type="text"><label class="form-label">Время</label></div>
+                  <div class="main-form__input"><input class="timepicker" type="time" autocomplete="off" placeholder=""><label class="form-label">Время</label></div>
                 </div><button class="main-form__addtime"></button>
               </div>
             </template>
             <div class="main-form__dates">
               <div class="main-form__date">
-                <div class="main-form__input"><input type="text" id="date"><label class="form-label" for="date">Дата</label></div>
+                <div class="main-form__input"><input class="datepicker" type="text" id="date" autocomplete="off"><label class="form-label" for="date">Дата</label></div>
                 <div class="main-form__date-times">
-                  <div class="main-form__input"><input type="text" id="time"><label class="form-label" for="time">Время</label></div>
+                  <div class="main-form__input"><input class="timepicker" type="time" id="time" autocomplete="off" placeholder=""><label class="form-label" for="time">Время</label></div>
                 </div><button class="main-form__addtime"></button>
               </div>
             </div><button class="main-form__adddate button-link">Добавить дату</button>

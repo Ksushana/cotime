@@ -12,10 +12,12 @@ $(function () {
     const button = $(target);
     const color = button.css("background-color");
     nameInput.css("background-color", color);
+    nameInput.css("color", "#ffffff");
   });
 
   const participantsInput = mainForm.find(".main-form__participants");
   const participantsTooltip = mainForm.find(".main-form__part-input .tooltip");
+  const close = mainForm.find(".main-form__part-input .tooltip button");
   const handleParticipantsInputUpdate = (evt) => {
     let value;
     const target = evt.target;
@@ -23,11 +25,15 @@ $(function () {
       value = parseInt(target.value, 10);
     } catch (err) {}
 
-    if (value && value > 2) {
+    if (value && value > 1) {
       participantsTooltip.removeClass("tooltip--hidden");
     } else {
       participantsTooltip.addClass("tooltip--hidden");
     }
+
+    close.on("click", function () {
+      participantsTooltip.addClass("tooltip--hidden");
+    });
   };
   participantsInput.on("change", handleParticipantsInputUpdate);
   participantsInput.on("input", handleParticipantsInputUpdate);
@@ -50,6 +56,11 @@ $(function () {
   const addDate = () => {
     const clon = dateTemplate.content.cloneNode(true);
     datesContainer.appendChild(clon);
+    $(".datepicker").datepicker({
+      numberOfMonths: 50,
+      language: "ru",
+      shortYearCutoff: 50,
+    });
   };
   mainForm.on("click", "button.main-form__adddate", (evt) => {
     evt.preventDefault();

@@ -30,10 +30,10 @@ block content
           input.main-form__discription(type="text" placeholder="Описание")
           input.main-form__link(type="text" placeholder="Ссылка на онлайн-занятие")
           div.main-form__input
-            input.main-form__price(type="text" id="price")
+            input.main-form__price(type="text" id="price" autocomplete="off")
             label.form-label.price-label(for="price") Цена
           div.main-form__part-input.main-form__input
-            input.main-form__participants(type="number" id="max" min="1")
+            input.main-form__participants(type="number" id="max" min="1" autocomplete="off")
             label.form-label(for="max") Максимум участников
             div.tooltip.tooltip--hidden
               p Групповые занятия доступны с тарифами <a href="#">BASIC</a> и <a href="#">PRO</a>. Для индивидуальных занятий оформление онлайн-занятия бесплатно .
@@ -47,26 +47,26 @@ block content
         .main-form__dates-block
           template.time
             .main-form__input
-              input(type="text")
+              input.timepicker(type="time" autocomplete="off" placeholder="")
               label.form-label Время
           template.date
             .main-form__date
               .main-form__input
-                input(type="text")
+                input.datepicker(type="text" autocomplete="off")
                 label.form-label Дата
               .main-form__date-times
                 .main-form__input
-                  input(type="text")
+                  input.timepicker(type="time" autocomplete="off" placeholder="")
                   label.form-label Время
               button.main-form__addtime
           .main-form__dates
             .main-form__date
               .main-form__input
-                input(type="text" id="date")
+                input.datepicker(type="text" id="date" autocomplete="off")
                 label.form-label(for="date") Дата
               .main-form__date-times
                 .main-form__input
-                  input(type="text" id="time")
+                  input.timepicker(type="time" id="time" autocomplete="off" placeholder="")
                   label.form-label(for="time") Время
               button.main-form__addtime
           button.main-form__adddate.button-link Добавить дату

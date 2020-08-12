@@ -19062,6 +19062,67 @@ function copyToClipboard(elem) {
 }
 
 $(function () {
+  $.datepicker.regional["ru"] = {
+    closeText: "Закрыть",
+    prevText: "&#x3c;Пред",
+    nextText: "След&#x3e;",
+    currentText: "Сегодня",
+    monthNames: [
+      "Январь",
+      "Февраль",
+      "Март",
+      "Апрель",
+      "Май",
+      "Июнь",
+      "Июль",
+      "Август",
+      "Сентябрь",
+      "Октябрь",
+      "Ноябрь",
+      "Декабрь",
+    ],
+    monthNamesShort: [
+      "Январь",
+      "Февраль",
+      "Март",
+      "Апрель",
+      "Май",
+      "Июнь",
+      "Июль",
+      "Август",
+      "Сентябрь",
+      "Октябрь",
+      "Ноябрь",
+      "Декабрь",
+    ],
+    dayNames: [
+      "воскресенье",
+      "понедельник",
+      "вторник",
+      "среда",
+      "четверг",
+      "пятница",
+      "суббота",
+    ],
+    dayNamesShort: ["вск", "пнд", "втр", "срд", "чтв", "птн", "сбт"],
+    dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+    weekHeader: "Нед",
+    dateFormat: "dd.mm.yy",
+    firstDay: 1,
+    isRTL: false,
+    showMonthAfterYear: false,
+    yearSuffix: "",
+  };
+  $.datepicker.setDefaults($.datepicker.regional["ru"]);
+
+  $(".datepicker").datepicker({
+    numberOfMonths: 50,
+    language: "ru",
+    shortYearCutoff: 50,
+  });
+});
+
+$(function () {
   $("#phone").mask("+7 (999) 999-9999", { placeholder: "+7" });
   $("#code").mask("9", { placeholder: " " });
 });
@@ -19139,10 +19200,12 @@ $(function () {
     const button = $(target);
     const color = button.css("background-color");
     nameInput.css("background-color", color);
+    nameInput.css("color", "#ffffff");
   });
 
   const participantsInput = mainForm.find(".main-form__participants");
   const participantsTooltip = mainForm.find(".main-form__part-input .tooltip");
+  const close = mainForm.find(".main-form__part-input .tooltip button");
   const handleParticipantsInputUpdate = (evt) => {
     let value;
     const target = evt.target;
@@ -19150,11 +19213,15 @@ $(function () {
       value = parseInt(target.value, 10);
     } catch (err) {}
 
-    if (value && value > 2) {
+    if (value && value > 1) {
       participantsTooltip.removeClass("tooltip--hidden");
     } else {
       participantsTooltip.addClass("tooltip--hidden");
     }
+
+    close.on("click", function () {
+      participantsTooltip.addClass("tooltip--hidden");
+    });
   };
   participantsInput.on("change", handleParticipantsInputUpdate);
   participantsInput.on("input", handleParticipantsInputUpdate);
@@ -19177,6 +19244,11 @@ $(function () {
   const addDate = () => {
     const clon = dateTemplate.content.cloneNode(true);
     datesContainer.appendChild(clon);
+    $(".datepicker").datepicker({
+      numberOfMonths: 50,
+      language: "ru",
+      shortYearCutoff: 50,
+    });
   };
   mainForm.on("click", "button.main-form__adddate", (evt) => {
     evt.preventDefault();

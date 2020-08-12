@@ -26,6 +26,16 @@
     }
   }
 
+  .timepicker {
+    width: 90px;
+    margin-right: 20px;
+
+    @include mobile {
+      width: 59px;
+      margin-right: 13px;
+    }
+  }
+
   input:focus {
     border-bottom: 1px solid $color-btn-blue;
   }
@@ -60,20 +70,10 @@
         border-bottom: 1px solid $color-border-grey;
         margin-top: 29px;
         padding-bottom: 6px;
-
+        height: 30px;
         @include mobile {
           margin-right: 28px;
           padding-bottom: 13px;
-        }
-
-        &#time {
-          width: 90px;
-          margin-right: 20px;
-
-          @include mobile {
-            width: 59px;
-            margin-right: 13px;
-          }
         }
       }
     }
@@ -93,6 +93,8 @@
   text-align: bottom;
   resize: none;
   border: none;
+  outline: none;
+  transition: background-color 0.4s;
 
   @include mobile {
     font-weight: 500;
@@ -351,10 +353,19 @@ input {
   @include mobile {
     margin-top: -6px;
   }
+
+  button {
+    order: 2;
+  }
 }
 
 .main-form__adddate {
   margin-top: 16px !important;
+  position: relative;
+
+  &:after {
+    position: absolute;
+  }
 
   @include mobile {
     font-size: 17px;
@@ -423,10 +434,10 @@ input {
     color: #a2aabd;
     z-index: 10000;
     opacity: 1;
-    pointer-events: none;
 
     &--hidden {
       opacity: 0;
+      pointer-events: none;
     }
 
     a {
@@ -442,5 +453,112 @@ input {
       text-align: center;
       color: #3773e0;
     }
+  }
+}
+
+.ui-datepicker {
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  width: 320px !important;
+  height: 370px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  font-family: $font-family !important;
+  padding: 11px;
+  font-weight: 300;
+  font-size: 15px;
+  padding-top: 68px;
+
+  thead {
+    display: none;
+  }
+
+  .ui-datepicker-group-first {
+    thead {
+      display: table-header-group;
+      text-transform: uppercase;
+      transform: translateY(-39px);
+      height: 0;
+      opacity: 0.4;
+      border-bottom: 1px solid #ced3de;
+    }
+
+    .ui-datepicker-calendar {
+      margin: -33px 0 0 !important;
+      width: 100% !important;
+    }
+  }
+
+  td a {
+    border: none !important;
+    background: none !important;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 28px;
+    text-align: center !important;
+    padding: 0 !important;
+  }
+
+  .ui-button.ui-state-active:hover,
+  .ui-button:active,
+  .ui-state-active,
+  .ui-widget-content .ui-state-active,
+  .ui-widget-header .ui-state-active,
+  a.ui-button:active {
+    position: relative;
+    background-color: transparent;
+    color: $color-white;
+
+    &:after {
+      position: absolute;
+      content: "";
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: $color-blue;
+      top: 0;
+      left: calc(50% - 14px);
+      z-index: -1;
+    }
+  }
+
+  .ui-datepicker-header {
+    border: none;
+    background: none;
+    // padding-bottom: 0 !important;
+  }
+
+  .ui-datepicker-title {
+    text-align: left;
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin-left: 9px;
+
+    color: #000000;
+  }
+
+  .ui-datepicker-prev {
+    display: none;
+  }
+
+  .ui-datepicker-calendar {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  /* хром, сафари */
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  /* ie 10+ */
+  & {
+    -ms-overflow-style: none;
+  }
+
+  /* фф (свойство больше не работает, других способов тоже нет)*/
+  & {
+    overflow: -moz-scrollbars-none;
   }
 }
