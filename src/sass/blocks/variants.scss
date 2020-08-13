@@ -5,6 +5,16 @@
   display: flex;
   padding: 53px 101px;
 
+  @media (max-width: 999px) {
+    max-width: 90%;
+    padding: 53px 30px;
+  }
+
+  @include mobile {
+    padding: 15px 20px;
+    max-width: 100%;
+  }
+
   input {
     display: none;
   }
@@ -13,6 +23,13 @@
     width: 798px;
     margin: 0 auto;
 
+    @media (max-width: 999px) {
+      max-width: 100%;
+    }
+    @include mobile {
+      max-width: 100%;
+    }
+
     h1 {
       font-weight: 500;
       font-size: 30px;
@@ -20,6 +37,11 @@
       text-align: center;
 
       color: #000000;
+
+      @include mobile {
+        font-size: 25px;
+        letter-spacing: 0.7px;
+      }
     }
   }
 
@@ -29,12 +51,29 @@
     padding-top: 28px;
     padding-bottom: 25px;
 
+    @include mobile {
+      flex-direction: column;
+      padding-top: 7px;
+      padding-bottom: 0;
+    }
+
     label {
       width: 248px;
       border: 1px solid #e1e4ea;
       box-sizing: border-box;
       padding: 14px 20px 14px 28px;
       transition: border 0.4s;
+
+      @media (max-width: 999px) {
+        max-width: 30%;
+      }
+
+      @include mobile {
+        width: 100%;
+        max-width: 100%;
+        padding: 4px 20px 4px 28px;
+        margin-bottom: 19px;
+      }
 
       h2 {
         font-weight: 300;
@@ -52,6 +91,10 @@
     color: $color-black;
     margin-top: 20px;
     margin-bottom: 38px;
+
+    @include mobile {
+      margin-bottom: 10px;
+    }
   }
 
   &__disc {
@@ -59,15 +102,37 @@
     font-size: 17px;
     line-height: 25px;
     color: $color-black;
+
+    @include mobile {
+      margin-top: 8px;
+    }
   }
 
-  input:checked + label {
+  input[type="radio"]:checked + label {
     border: 1px solid $color-btn-blue;
   }
 
   &__compare {
     margin: 0 auto 27px;
     display: block;
+    position: relative;
+    padding-right: 26px;
+
+    @include mobile {
+      margin-top: -4px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-bottom: 1px solid $color-btn-blue;
+      border-right: 1px solid $color-btn-blue;
+      transform: rotate(45deg);
+      right: 8px;
+      top: 10px;
+    }
   }
 
   &__individual {
@@ -80,6 +145,10 @@
     margin-bottom: 35px;
     display: inline-block;
 
+    @include mobile {
+      padding-left: 29px;
+    }
+
     &:before {
       position: absolute;
       content: "";
@@ -88,7 +157,7 @@
       border: 1px solid #e1e4ea;
       box-sizing: border-box;
       left: 0;
-      bottom: 0;
+      top: 2px;
     }
   }
 
@@ -99,5 +168,16 @@
     text-align: center;
     width: 574px;
     margin: 35px auto 0;
+
+    @include mobile {
+      width: 100%;
+      margin: 24px auto 0;
+    }
+  }
+
+  input[type="checkbox"]:checked + label::before {
+    background-image: url("./../img/tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
