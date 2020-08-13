@@ -47,7 +47,7 @@ block content
         .main-form__dates-block
           template.time
             .main-form__input
-              input.timepicker(type="text" autocomplete="off" placeholder="" pattern="/^([0-1]\d|20|21|22|23):[0-5]\d$/")
+              input.timepicker(type="text" autocomplete="off" placeholder="" )
               label.form-label Время
               span.close
           template.date
@@ -57,9 +57,8 @@ block content
                 label.form-label Дата
               .main-form__date-times
                 .main-form__input
-                  input.timepicker(type="text" autocomplete="off" placeholder="" pattern="/^([0-1]\d|20|21|22|23):[0-5]\d$/")
+                  input.timepicker(type="text" autocomplete="off" placeholder="" )
                   label.form-label Время
-                  span.close
               button.main-form__addtime
           .main-form__dates
             .main-form__date
@@ -68,7 +67,7 @@ block content
                 label.form-label(for="date") Дата
               .main-form__date-times
                 .main-form__input
-                  input.timepicker(type="text" id="time" autocomplete="off" placeholder="" pattern="/^([0-1]\d|20|21|22|23):[0-5]\d$/")
+                  input.timepicker(type="text" id="time" autocomplete="off" placeholder="" )
                   label.form-label(for="time") Время
               button.main-form__addtime
           button.main-form__adddate.button-link Добавить дату

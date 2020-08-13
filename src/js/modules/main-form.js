@@ -55,6 +55,7 @@ $(function () {
     const button = $(target);
     const dateContainer = button.parent(".main-form__date")[0];
     addTime(dateContainer);
+    $(".timepicker").mask("99:99", { placeholder: " " });
   });
 
   $(document).on("click", ".main-form__dates-block .close", (evt) => {
@@ -79,6 +80,7 @@ $(function () {
   mainForm.on("click", "button.main-form__adddate", (evt) => {
     evt.preventDefault();
     addDate();
+    $(".timepicker").mask("99:99", { placeholder: " " });
   });
 
   const allInputs = mainForm.find("input,textarea,select");
