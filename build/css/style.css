@@ -4746,6 +4746,24 @@ p.phone-form-note a {
   width: 180px;
 }
 
+.subscribe-popup .subscribe-form__email {
+  position: relative;
+  padding-left: 24px;
+}
+
+.subscribe-popup .subscribe-form__email::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 32%;
+  background-image: url("./../img/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 14px;
+  height: 12px;
+}
+
 .ui-widget-overlay {
   background: #000000;
   mix-blend-mode: multiply;
