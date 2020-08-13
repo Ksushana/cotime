@@ -31,9 +31,19 @@
     margin-right: 20px;
 
     @include mobile {
-      width: 59px;
-      margin-right: 13px;
+      width: 108px !important;
+      margin-right: 18px !important;
+      flex-shrink: 1;
     }
+
+    @media (max-width: 374px) {
+      width: 59px !important;
+      margin-right: 13px !important;
+    }
+  }
+
+  &__date-times {
+    flex-shrink: 1;
   }
 
   input:focus {
@@ -60,9 +70,13 @@
   }
 
   &__date {
+    @include mobile {
+      display: flex;
+    }
     .main-form__input {
       position: relative;
       margin-top: 42px;
+
       input {
         width: 120px;
         padding: 0 0 6px;
@@ -78,6 +92,20 @@
       }
     }
   }
+
+  &__dates-block {
+    .close {
+      width: 12px;
+      height: 12px;
+      background-image: url("./../img/Delete.svg");
+      background-size: 100%;
+      background-position: center;
+      display: block;
+      position: absolute;
+      right: 31px;
+      top: 24px;
+    }
+  }
 }
 
 .main-form__name {
@@ -90,11 +118,12 @@
   font-size: 55px;
   line-height: 65px;
   color: $color-text-grey;
-  text-align: bottom;
   resize: none;
   border: none;
   outline: none;
   transition: background-color 0.4s;
+  display: table-cell;
+  vertical-align: bottom;
 
   @include mobile {
     font-weight: 500;
@@ -104,6 +133,7 @@
     height: 206px;
     width: calc(100% + 40px);
     margin-left: -20px;
+    border-radius: 0;
   }
 }
 
@@ -113,6 +143,10 @@
   margin-bottom: 9px;
 
   @include mobile {
+    margin-top: 21px;
+  }
+
+  @media (max-width: 374px) {
     margin-top: 17px;
   }
 
@@ -179,6 +213,7 @@
 
   @include mobile {
     margin-top: -24px;
+    justify-content: flex-start;
   }
 
   .main-form__input {
@@ -188,6 +223,7 @@
 
     @include mobile {
       margin-top: 44px;
+      margin-right: 10px;
     }
   }
 
@@ -226,6 +262,14 @@ input {
   margin-bottom: 7px;
 }
 
+.main-form__price-block,
+.main-form__part-input,
+.main-form__select {
+  @media (max-width: 450px) {
+    width: 100% !important;
+  }
+}
+
 .main-form__discription::placeholder,
 .main-form__link::placeholder {
   font-weight: 300;
@@ -244,6 +288,10 @@ input {
   border-bottom: 1px solid $color-border-grey;
   margin-top: 29px;
   padding-bottom: 6px;
+
+  @media (max-width: 450px) {
+    width: 100%;
+  }
 }
 
 .main-form__instructor {
@@ -262,6 +310,10 @@ input {
   position: absolute;
   top: 0;
   left: 0;
+
+  @include mobile {
+    top: -6px;
+  }
 
   &.price-label {
     width: fit-content;
@@ -293,6 +345,11 @@ input {
     margin-top: 25px;
     display: block;
     padding-bottom: 6px;
+
+    @include mobile {
+      margin-top: 21px;
+      width: 100% !important;
+    }
   }
 
   .select2-container--default .select2-selection--single {
@@ -351,11 +408,16 @@ input {
   flex-wrap: wrap;
 
   @include mobile {
+    margin-top: 0;
+  }
+
+  @media (max-width: 374px) {
     margin-top: -6px;
   }
 
   button {
     order: 2;
+    flex-shrink: 0;
   }
 }
 
@@ -452,13 +514,27 @@ input {
       line-height: 25px;
       text-align: center;
       color: #3773e0;
+      width: 100%;
+      margin-top: 0;
     }
+  }
+}
+
+.datepicker + label {
+  &::after {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: #e7e7e7;
+    border-radius: 50%;
+    top: 30px;
+    right: 12px;
   }
 }
 
 .ui-datepicker {
   overflow: scroll;
-  display: flex;
   flex-direction: column;
   width: 320px !important;
   height: 370px;
@@ -469,8 +545,18 @@ input {
   font-size: 15px;
   padding-top: 68px;
 
+  @include mobile {
+    width: 100vw !important;
+    max-width: 420px;
+    left: 0 !important;
+  }
+
   thead {
     display: none;
+  }
+
+  .ui-datepicker-group {
+    width: 100%;
   }
 
   .ui-datepicker-group-first {

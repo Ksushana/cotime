@@ -145,3 +145,6 @@ input:-webkit-autofill {
   -webkit-animation-name: autofill;
   -webkit-animation-fill-mode: both;
 }
+input {
+  border-radius: 0;
+}

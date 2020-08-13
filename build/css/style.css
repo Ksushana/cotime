@@ -3186,6 +3186,10 @@ input:-webkit-autofill {
   -webkit-animation-fill-mode: both;
 }
 
+input {
+  border-radius: 0;
+}
+
 /* Blocks */
 .header {
   height: 80px;
@@ -3313,9 +3317,23 @@ input:-webkit-autofill {
 
 @media (max-width: 799px) {
   .main-form .timepicker {
-    width: 59px;
-    margin-right: 13px;
+    width: 108px !important;
+    margin-right: 18px !important;
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
   }
+}
+
+@media (max-width: 374px) {
+  .main-form .timepicker {
+    width: 59px !important;
+    margin-right: 13px !important;
+  }
+}
+
+.main-form__date-times {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
 }
 
 .main-form input:focus {
@@ -3343,6 +3361,14 @@ input:-webkit-autofill {
   }
 }
 
+@media (max-width: 799px) {
+  .main-form__date {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .main-form__date .main-form__input {
   position: relative;
   margin-top: 42px;
@@ -3365,6 +3391,18 @@ input:-webkit-autofill {
   }
 }
 
+.main-form__dates-block .close {
+  width: 12px;
+  height: 12px;
+  background-image: url("./../img/Delete.svg");
+  background-size: 100%;
+  background-position: center;
+  display: block;
+  position: absolute;
+  right: 31px;
+  top: 24px;
+}
+
 .main-form__name {
   width: calc(100% + 110px);
   height: 349px;
@@ -3375,12 +3413,13 @@ input:-webkit-autofill {
   font-size: 55px;
   line-height: 65px;
   color: #a2aabd;
-  text-align: bottom;
   resize: none;
   border: none;
   outline: none;
   -webkit-transition: background-color 0.4s;
   transition: background-color 0.4s;
+  display: table-cell;
+  vertical-align: bottom;
 }
 
 @media (max-width: 799px) {
@@ -3392,6 +3431,7 @@ input:-webkit-autofill {
     height: 206px;
     width: calc(100% + 40px);
     margin-left: -20px;
+    border-radius: 0;
   }
 }
 
@@ -3404,6 +3444,12 @@ input:-webkit-autofill {
 }
 
 @media (max-width: 799px) {
+  .main-form__color {
+    margin-top: 21px;
+  }
+}
+
+@media (max-width: 374px) {
   .main-form__color {
     margin-top: 17px;
   }
@@ -3486,6 +3532,9 @@ input:-webkit-autofill {
 @media (max-width: 799px) {
   .main-form__inputs {
     margin-top: -24px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
@@ -3498,6 +3547,7 @@ input:-webkit-autofill {
 @media (max-width: 799px) {
   .main-form__inputs .main-form__input {
     margin-top: 44px;
+    margin-right: 10px;
   }
 }
 
@@ -3528,6 +3578,14 @@ input {
   border-bottom: 1px solid #ced3de;
   margin-top: 50px;
   margin-bottom: 7px;
+}
+
+@media (max-width: 450px) {
+  .main-form__price-block,
+  .main-form__part-input,
+  .main-form__select {
+    width: 100% !important;
+  }
 }
 
 .main-form__discription::-webkit-input-placeholder, .main-form__link::-webkit-input-placeholder {
@@ -3589,6 +3647,14 @@ input {
   padding-bottom: 6px;
 }
 
+@media (max-width: 450px) {
+  .main-form__price,
+  .main-form__participants,
+  .main-form__duration {
+    width: 100%;
+  }
+}
+
 .main-form__instructor {
   margin-top: 22px;
 }
@@ -3604,6 +3670,12 @@ input {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+@media (max-width: 799px) {
+  .form-label {
+    top: -6px;
+  }
 }
 
 .form-label.price-label {
@@ -3638,6 +3710,13 @@ input {
   margin-top: 25px;
   display: block;
   padding-bottom: 6px;
+}
+
+@media (max-width: 799px) {
+  .main-form__select span.select2 {
+    margin-top: 21px;
+    width: 100% !important;
+  }
 }
 
 .main-form__select .select2-container--default .select2-selection--single {
@@ -3705,6 +3784,12 @@ input {
 
 @media (max-width: 799px) {
   .main-form__date {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 374px) {
+  .main-form__date {
     margin-top: -6px;
   }
 }
@@ -3713,6 +3798,8 @@ input {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .main-form__adddate {
@@ -3812,13 +3899,23 @@ input {
   line-height: 25px;
   text-align: center;
   color: #3773e0;
+  width: 100%;
+  margin-top: 0;
+}
+
+.datepicker + label::after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #e7e7e7;
+  border-radius: 50%;
+  top: 30px;
+  right: 12px;
 }
 
 .ui-datepicker {
   overflow: scroll;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -3837,8 +3934,20 @@ input {
   /* фф (свойство больше не работает, других способов тоже нет)*/
 }
 
+@media (max-width: 799px) {
+  .ui-datepicker {
+    width: 100vw !important;
+    max-width: 420px;
+    left: 0 !important;
+  }
+}
+
 .ui-datepicker thead {
   display: none;
+}
+
+.ui-datepicker .ui-datepicker-group {
+  width: 100%;
 }
 
 .ui-datepicker .ui-datepicker-group-first thead {

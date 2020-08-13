@@ -41,6 +41,12 @@ $(function () {
   const timeTemplate = mainForm.find("template.time")[0];
   const addTime = (dateContainer) => {
     const clon = timeTemplate.content.cloneNode(true);
+    $(clon)
+      .find(".close")
+      .on("click", () => {
+        $(clon).remove();
+      });
+    $(".timepicker").mask("99:99", { placeholder: " " });
     dateContainer.appendChild(clon);
   };
   $(document).on("click", "button.main-form__addtime", (evt) => {
@@ -49,6 +55,14 @@ $(function () {
     const button = $(target);
     const dateContainer = button.parent(".main-form__date")[0];
     addTime(dateContainer);
+  });
+
+  $(document).on("click", ".main-form__dates-block .close", (evt) => {
+    evt.preventDefault();
+    const target = evt.target;
+    const button = $(target);
+    const timeContainer = button.parent(".main-form__input");
+    timeContainer.remove();
   });
 
   const dateTemplate = mainForm.find("template.date")[0];
