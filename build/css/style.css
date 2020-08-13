@@ -1366,7 +1366,6 @@ body .ui-tooltip {
 /* Component containers
 ----------------------------------*/
 .ui-widget {
-  font-family: Verdana, Arial, sans-serif;
   font-size: 1.1em;
 }
 
@@ -1378,7 +1377,6 @@ body .ui-tooltip {
 .ui-widget select,
 .ui-widget textarea,
 .ui-widget button {
-  font-family: Verdana, Arial, sans-serif;
   font-size: 1em;
 }
 
@@ -2996,7 +2994,7 @@ a.ui-button:active,
 
 /* General */
 @font-face {
-  font-family: "Museo Sans Cyrillic";
+  font-family: "MuseoSansCyrillic";
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -3004,7 +3002,7 @@ a.ui-button:active,
 }
 
 @font-face {
-  font-family: "Museo Sans Cyrillic";
+  font-family: "MuseoSansCyrillic";
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -3012,7 +3010,7 @@ a.ui-button:active,
 }
 
 @font-face {
-  font-family: "Museo Sans Cyrillic";
+  font-family: "MuseoSansCyrillic";
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -3044,6 +3042,7 @@ html {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "MuseoSansCyrillic", "Arial", sans-serif !important;
 }
 
 body {
@@ -3051,7 +3050,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Museo Sans Cyrillic  ", "Arial", sans-serif;
+  font-family: "MuseoSansCyrillic", "Arial", sans-serif;
   font-weight: 300;
   color: #a2aabd;
   background-color: #f4f5f7;
@@ -3139,6 +3138,7 @@ button {
 }
 
 .button-link {
+  font-family: "MuseoSansCyrillic", "Arial", sans-serif;
   border: none;
   font-weight: 300;
   font-size: 20px;
@@ -3598,24 +3598,28 @@ input {
   font-weight: 300;
   font-size: 20px;
   line-height: 30px;
+  font-family: inherit;
 }
 
 .main-form__discription::-moz-placeholder, .main-form__link::-moz-placeholder {
   font-weight: 300;
   font-size: 20px;
   line-height: 30px;
+  font-family: inherit;
 }
 
 .main-form__discription:-ms-input-placeholder, .main-form__link:-ms-input-placeholder {
   font-weight: 300;
   font-size: 20px;
   line-height: 30px;
+  font-family: inherit;
 }
 
 .main-form__discription::-ms-input-placeholder, .main-form__link::-ms-input-placeholder {
   font-weight: 300;
   font-size: 20px;
   line-height: 30px;
+  font-family: inherit;
 }
 
 .main-form__discription::placeholder,
@@ -3623,6 +3627,7 @@ input {
   font-weight: 300;
   font-size: 20px;
   line-height: 30px;
+  font-family: inherit;
 }
 
 @media (max-width: 799px) {
@@ -3938,7 +3943,7 @@ input {
   height: 370px;
   -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
-  font-family: "Museo Sans Cyrillic  ", "Arial", sans-serif !important;
+  font-family: "MuseoSansCyrillic", "Arial", sans-serif !important;
   padding: 11px;
   font-weight: 300;
   font-size: 15px;

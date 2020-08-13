@@ -279,6 +279,7 @@ input {
   font-weight: 300;
   font-size: 20px;
   line-height: 30px;
+  font-family: inherit;
 
   @include mobile {
     font-size: 17px;

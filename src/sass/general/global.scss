@@ -20,6 +20,7 @@ html {
 
 * {
   box-sizing: border-box;
+  font-family: $font-family !important;
 }
 
 body {
@@ -101,6 +102,7 @@ button {
 }
 
 .button-link {
+  font-family: $font-family;
   border: none;
   font-weight: 300;
   font-size: 20px;
