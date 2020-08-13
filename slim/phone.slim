@@ -1,0 +1,27 @@
+doctype html
+html lang="ru"
+  head
+    meta charset="UTF-8" /
+    title Cotime | Введите номер телефона
+    meta content="width=device-width, initial-scale=1.0" name="viewport" /
+    link as="font" crossorigin="" href="fonts/MuseoSansCyrl-300.woff2" rel="preload" type="font/woff2" /
+    link as="font" crossorigin="" href="fonts/MuseoSansCyrl-500.woff2" rel="preload" type="font/woff2" /
+    link as="font" crossorigin="" href="fonts/MuseoSansCyrl-700.woff2" rel="preload" type="font/woff2" /
+    link href="css/style.min.css" rel="stylesheet" /
+  body
+    header.header
+      .header__logo
+        img alt="logo" height="20" src="img/logo.svg" width="108" /
+      .header__account
+        p Maksimova M.
+      .header__kebab
+    main
+      .container
+        .line.step2
+        form.phone-form method="post"
+          h1 Введите номер телефона
+          p Этот номер нужен для регистрации аккаунта.  Мы не покажем его в анонсе занятия.
+          input#phone placeholder="+7" type="tel" /
+          button.blue-btn type="submit"  Далее
+          button.button-link type="submit"  Назад
+    script src="js/script.min.js"

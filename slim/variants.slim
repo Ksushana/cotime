@@ -1,0 +1,51 @@
+doctype html
+html lang="ru"
+  head
+    meta charset="UTF-8" /
+    title Cotime | Варианты использования
+    meta content="width=device-width, initial-scale=1.0" name="viewport" /
+    link as="font" crossorigin="" href="fonts/MuseoSansCyrl-300.woff2" rel="preload" type="font/woff2" /
+    link as="font" crossorigin="" href="fonts/MuseoSansCyrl-500.woff2" rel="preload" type="font/woff2" /
+    link as="font" crossorigin="" href="fonts/MuseoSansCyrl-700.woff2" rel="preload" type="font/woff2" /
+    link href="css/style.min.css" rel="stylesheet" /
+  body
+    header.header
+      .header__logo
+        img alt="logo" height="20" src="img/logo.svg" width="108" /
+      .header__account
+        p Maksimova M.
+      .header__kebab
+    main
+      .container
+        .line.step3
+        form.var-form method="post"
+          .var-form__inner
+            h1 Варианты использования
+            .var-form__inputs
+              input#Hobby checked="" name="variants" type="radio" value="Hobby" /
+              label for="Hobby"
+              h2 Hobby
+              p.var-form__price Бесплатно
+              p.var-form__disc Создание индивидуальных сессий и 2 приема платежей в&nbsp;месяц
+              input#Part name="variants" type="radio" value="Part" /
+              label for="Part"
+              h2 Part time
+              p.var-form__price 999 р.
+              p.var-form__disc Все возможности приема платежей, 5.9%&nbsp;от суммы
+              input#Business name="variants" type="radio" value="Business" /
+              label for="Business"
+              h2 Business
+              p.var-form__price 1999 р.
+              p.var-form__disc Все возможности приема платежей, 2.9%&nbsp;от суммы
+            button.var-form__compare.button-link type="button"  Сравнить тарифы
+            input#want type="checkbox" /
+            label.var-form__individual for="want"  Хочу индивидуальный вариант с выделенным специалистом технической поддержки
+            button.blue-btn type="submit"  Далее
+            p.var-form__note
+              | 31 октября мы зарелизим систему тарифов. Уже сейчас действует тариф FREE. Вы подписаны на него.
+              = succeed "\u{412}" do
+                br/
+              | рамках этого тарифа с 31 октября вы&nbsp;сможете принимать бесплатно два&nbsp;платежа в&nbsp;месяц на сумму до
+              = succeed "." do
+                span 4&nbsp;999&nbsp;рублей
+    script src="js/script.min.js"

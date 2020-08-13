@@ -1,0 +1,38 @@
+doctype html
+html lang="ru"
+  head
+    meta charset="UTF-8" /
+    title Cotime | Введите код из СМС
+    meta content="width=device-width, initial-scale=1.0" name="viewport" /
+    link as="font" crossorigin="" href="fonts/MuseoSansCyrl-300.woff2" rel="preload" type="font/woff2" /
+    link as="font" crossorigin="" href="fonts/MuseoSansCyrl-500.woff2" rel="preload" type="font/woff2" /
+    link as="font" crossorigin="" href="fonts/MuseoSansCyrl-700.woff2" rel="preload" type="font/woff2" /
+    link href="css/style.min.css" rel="stylesheet" /
+  body
+    header.header
+      .header__logo
+        img alt="logo" height="20" src="img/logo.svg" width="108" /
+      .header__account
+        p Maksimova M.
+      .header__kebab
+    main
+      .container
+        .line.step2
+        form.phone-form.phone-form--code method="post"
+          h1 Введите код из СМС
+          p Мы отправили 6-значный код на введенный вами номер телефона.
+          .phone-form__code
+            input#code autofocus="" maxlength="1" onkeyup="testJump(this);" size="1" type="text" /
+            input#code maxlength="1" onkeyup="testJump(this);" size="1" type="text" /
+            input#code maxlength="1" onkeyup="testJump(this);" size="1" type="text" /
+            span –
+            input#code maxlength="1" onkeyup="testJump(this);" size="1" type="text" /
+            input#code maxlength="1" onkeyup="testJump(this);" size="1" type="text" /
+            input#code maxlength="1" onkeyup="testJump(this);" size="1" type="text" /
+          button.blue-btn type="submit"  Далее
+          button.button-link type="submit"  Отправить на другой номер
+          p.phone-form-note
+            | Нажимая «Далее», вы подписываете
+            a href="#"  договор использования
+            | сервиса Cotime
+    script src="js/script.min.js"

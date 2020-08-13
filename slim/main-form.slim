@@ -1,0 +1,97 @@
+doctype html
+html lang="ru"
+  head
+    meta charset="UTF-8" /
+    title Cotime | Форма заявки
+    meta content="width=device-width, initial-scale=1.0" name="viewport" /
+    link as="font" crossorigin="" href="fonts/MuseoSansCyrl-300.woff2" rel="preload" type="font/woff2" /
+    link as="font" crossorigin="" href="fonts/MuseoSansCyrl-500.woff2" rel="preload" type="font/woff2" /
+    link as="font" crossorigin="" href="fonts/MuseoSansCyrl-700.woff2" rel="preload" type="font/woff2" /
+    link href="css/style.min.css" rel="stylesheet" /
+  body
+    header.header
+      .header__logo
+        img alt="logo" height="20" src="img/logo.svg" width="108" /
+      .header__account
+        p Maksimova M.
+      .header__kebab
+    main
+      .container
+        .line.step1
+        h1.visually-hidden Форма заявки
+        .main-form
+          form method="post"
+            textarea.main-form__name placeholder="Название" valign="bottom"
+            .main-form__color
+              input#lila name="color" type="radio" value="lila" /
+              label.lila for="lila"
+              input#violet name="color" type="radio" value="violet" /
+              label.violet for="violet"
+              input#blue name="color" type="radio" value="blue" /
+              label.blue for="blue"
+              input#lightgreen name="color" type="radio" value="lightgreen" /
+              label.lightgreen for="lightgreen"
+              input#green name="color" type="radio" value="green" /
+              label.green for="green"
+              input#orange name="color" type="radio" value="orange" /
+              label.orange for="orange"
+              input#yellow name="color" type="radio" value="yellow" /
+              label.yellow for="yellow"
+            .main-form__inputs
+              input.main-form__discription placeholder="Описание" type="text" /
+              input.main-form__link placeholder=("Ссылка на онлайн-занятие") type="text" /
+              .main-form__input.main-form__price-block
+                input#price.main-form__price autocomplete="off" type="text" /
+                label.form-label.price-label for="price"  Цена
+              .main-form__part-input.main-form__input
+                input#max.main-form__participants autocomplete="off" min="1" type="number" /
+                label.form-label for="max"  Максимум участников
+                .tooltip.tooltip--hidden
+                  p
+                    | Групповые занятия доступны с тарифами
+                    a href="#"  BASIC
+                    | и
+                    = succeed "." do
+                      a href="#"  PRO
+                    | Для индивидуальных занятий оформление онлайн-занятия бесплатно .
+                  button type="button"  Понятно
+              .main-form__select.main-form__select--big.main-form__input
+                select#duration.main-form__duration.custom-select name="duration[]"
+                  option value="45"  45 минут
+                  option value="1"  1 час
+                  option value="2"  2 часа
+                label.form-label for="duration"  Длительность
+            .main-form__dates-block
+              template.time
+                .main-form__input
+                  input.timepicker autocomplete="off" placeholder="" type="text" /
+                  label.form-label Время
+                  span.close
+              template.date
+                .main-form__date
+                  .main-form__input
+                    input.datepicker autocomplete="off" type="text" /
+                    label.form-label Дата
+                  .main-form__date-times
+                    .main-form__input
+                      input.timepicker autocomplete="off" placeholder="" type="text" /
+                      label.form-label Время
+                  button.main-form__addtime
+              .main-form__dates
+                .main-form__date
+                  .main-form__input
+                    input#date.datepicker autocomplete="off" type="text" /
+                    label.form-label for="date"  Дата
+                  .main-form__date-times
+                    .main-form__input
+                      input#time.timepicker autocomplete="off" placeholder="" type="text" /
+                      label.form-label for="time"  Время
+                  button.main-form__addtime
+              button.main-form__adddate.button-link Добавить дату
+            .main-form__inputs.main-form__inputs--big
+              .main-form__input
+                input#instructor.main-form__instructor type="text" /
+                label.form-label for="instructor"  Имя и фамилия ведущего
+              input.main-form__tags placeholder=("Добавить теги") type="text" /
+            button.blue-btn disabled="" type="submit"  Создать
+    script src="js/script.min.js"
