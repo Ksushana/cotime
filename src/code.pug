@@ -10,13 +10,13 @@ block content
       h1 #{title}
       p Мы отправили 6-значный код на введенный вами номер телефона.
       .phone-form__code
-        input#code( type="text" onkeyup="testJump(this);" maxlength="1" size="1" autofocus )
-        input#code( type="text" onkeyup="testJump(this);" maxlength="1" size="1")
-        input#code( type="text" onkeyup="testJump(this);" maxlength="1" size="1")
+        input.group-code( type="text"  maxlength="1" size="1" autofocus )
+        input.group-code( type="text"  maxlength="1" size="1")
+        input.group-code( type="text"  maxlength="1" size="1")
         span 	&#8211;
-        input#code( type="text" onkeyup="testJump(this);" maxlength="1" size="1")
-        input#code( type="text" onkeyup="testJump(this);" maxlength="1" size="1")
-        input#code( type="text" onkeyup="testJump(this);" maxlength="1" size="1")
+        input.group-code( type="text"  maxlength="1" size="1")
+        input.group-code( type="text"  maxlength="1" size="1")
+        input.group-code( type="text"  maxlength="1" size="1")
       button.blue-btn(type="submit") Далее
       button.button-link(type="submit") Отправить на другой номер
       p.phone-form-note Нажимая «Далее», вы подписываете <a href="#">договор использования</a> сервиса Cotime
