@@ -1,6 +1,10 @@
 .footer {
   display: flex;
 
+  &.is-event {
+    display: none;
+  }
+
   &__inner {
     width: calc(100vw - 200px);
     margin: 67px auto 165px;

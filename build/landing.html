@@ -12,12 +12,10 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header is-landing">
     <div class="header__logo"><img src="img/logo.svg" alt="logo" width="108" height="20"></div>
     <div class="header__links"><a class="header__link" href="./prices">Тарифы</a><a class="header__link" href="./faq">Вопросы и ответы</a><a class="header__link" href="./new-event">+ Создать занятие</a></div>
-    <div class="header__account header__account--logged"><a class="header__link header__link--enter" href="">Войти</a>
-      <p class="header__account--name">Maksimova M.</p>
-    </div>
+    <div class="header__account header__account--logged"><a class="header__link header__link--enter" href="">Войти</a><button class="header__account--name" type="button">Maksimova M.</button></div>
     <div class="header__kebab"></div>
   </header>
   <main>
@@ -36,9 +34,8 @@
             <li class="landing-block__list-item">Управляйте своим расписанием из личного кабинете</li>
           </ul>
         </div>
-        <div class="landing-block__photo">
-          <picture>
-            <source srcset="img/step1@1x.png 1x, img/step1@2x.png 2x"><img src="img/step1@1x.png" alt=""></picture>
+        <div class="landing-block__photos">
+          <div class="landing-block__photo"><img class="landing-block__photo-1" src="img/step1@1x.png" srcset="img/step1@2x.png 2x" alt=""><img class="landing-block__photo-2" src="img/step1-2@1x.png" srcset="img/step1-2@2x.png 2x" alt=""><img class="landing-block__photo-3" src="img/step1-3@1x.png" srcset="img/step1-3@2x.png 2x" alt=""></div>
         </div>
       </div>
       <div class="landing-block">
@@ -49,9 +46,9 @@
             <li class="landing-block__list-item">Выберите и подключите тарифный план</li>
             <li class="landing-block__list-item">Укажите ИНН, БИК и номер расчетного счета</li>
             <li class="landing-block__list-item">Принимайте платежи на расчетный счет</li>
-          </ul><a class="landing-block__link button-link">Выбрать тариф</a>
+          </ul><a class="landing-block__link button-link" href="./tariffs.html">Выбрать тариф</a>
         </div>
-        <div class="landing-block__photo">
+        <div class="landing-block__photos">
           <picture>
             <source srcset="img/step2@1x.png 1x, img/step2@2x.png 2x"><img src="img/step2@1x.png" alt=""></picture>
         </div>
@@ -68,7 +65,7 @@
             <li class="landing-block__list-item">Управление расписанием</li>
           </ul>
         </div>
-        <div class="landing-block__photo">
+        <div class="landing-block__photos">
           <picture>
             <source srcset="img/step3@1x.png 1x, img/step3@2x.png 2x"><img src="img/step3@1x.png" alt=""></picture>
         </div>

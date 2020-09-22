@@ -15,7 +15,7 @@ html( lang="ru" )
     link( rel="stylesheet" href="css/style.min.css" )
 
   body
-    header.header( class=(isEvent ? "is-event" : null) )
+    header.header( class=(isEvent ? "is-event" : null) class=(isLanding ? "is-landing" : null) )
       .header__logo
         img(src="img/logo.svg", alt="logo", width="108", height="20")
       .header__links( class=(isEvent ? "hide" : null) )
@@ -24,14 +24,14 @@ html( lang="ru" )
         a.header__link(href="./new-event") + Создать занятие
       .header__account.header__account--logged
         a.header__link.header__link--enter(href="") Войти
-        p.header__account--name Maksimova M.
+        button.header__account--name( type="button" ) Maksimova M.
       .header__kebab
 
 
     main
       block content
 
-    footer.footer
+    footer.footer( class=(isEvent ? "is-event" : null) )
       .footer__inner
         .footer__top
           .footer__logo © Cotime

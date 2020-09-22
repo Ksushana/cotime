@@ -1,0 +1,47 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Тарифы';
+  - let isTariffs = true;
+
+block content
+  .container
+    .tariffs-page
+      h1.tariffs-page__title Тарифы
+      .tariffs-page__table
+        table
+          thead
+            tr
+              th
+              th Hoby
+              th Part time
+              th Business
+          tbody
+            tr
+              td Цена
+              td.tariffs-page__price Бесплатно
+              td.tariffs-page__price 999 р. в месяц
+              td.tariffs-page__price 1999 р. в месяц
+            tr
+              td Создание  занятий
+              td Индивидуальные и групповые
+              td Индивидуальные и групповые
+              td Индивидуальные и групповые
+            tr
+              td Количество платежей
+              td 2 в месяц без комиссии или 4 999 рублей в месяц
+              td До 100 платежей или 99 999 рублей в месяц
+              td Без ограничений
+            tr
+              td Комиссия
+              td —
+              td 5,9%
+              td 2,9%
+            tr
+              td
+              td
+                a.blue-btn Подключить
+              td
+                a.blue-btn Выбрать
+              td
+                a.blue-btn Выбрать

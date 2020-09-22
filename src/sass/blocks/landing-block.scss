@@ -17,16 +17,42 @@
     padding-right: 20px;
   }
 
-  &__photo {
+  &__photos {
     grid-column: 8 / 13;
     display: flex;
     justify-content: center;
     padding: 0 10px;
+    position: relative;
 
     img {
       box-shadow: 10px 10px 60px rgba(113, 121, 138, 0.15);
       filter: drop-shadow(4px 4px 40px #E3E2E7);
     }
+  }
+
+  &__photo {
+    min-height: 500px;
+  }
+
+  &__photo-1 {
+    z-index: 3;
+    position: absolute;
+    top: 55px;
+    left: 55px;
+  }
+
+  &__photo-2 {
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    left: 30px;
+  }
+
+  &__photo-3 {
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
   }
 
   &__title {
@@ -67,5 +93,9 @@
   &__link {
     padding-left: 18px;
     margin-top: 5px;
+  }
+
+  &__photos-2 {
+    // position: absolute;
   }
 }

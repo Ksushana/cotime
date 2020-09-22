@@ -1,0 +1,22 @@
+.documents {
+  &__title {
+    font-weight: 500;
+    font-size: 65px;
+    line-height: 75px;
+    margin: 0 0 85px;
+  }
+
+  &__list-item {
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 37px;
+    color: $color-btn-blue;
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+
+    svg {
+      margin-right: 13px;
+    }
+  }
+}

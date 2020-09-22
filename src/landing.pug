@@ -20,10 +20,11 @@ block content
             li.landing-block__list-item Участники выберут время и запишутся
             li.landing-block__list-item Мы создадим встречи в ваших календарях
             li.landing-block__list-item Управляйте своим расписанием из личного кабинете
-        .landing-block__photo
-          picture
-            source(srcset="img/step1@1x.png 1x, img/step1@2x.png 2x")
-            img(src="img/step1@1x.png" alt="")
+        .landing-block__photos
+          .landing-block__photo
+              img.landing-block__photo-1(src="img/step1@1x.png" srcset="img/step1@2x.png 2x" alt="")
+              img.landing-block__photo-2(src="img/step1-2@1x.png" srcset="img/step1-2@2x.png 2x" alt="")
+              img.landing-block__photo-3(src="img/step1-3@1x.png" srcset="img/step1-3@2x.png 2x" alt="")
 
       .landing-block
         .landing-block__text
@@ -33,8 +34,8 @@ block content
             li.landing-block__list-item Выберите и подключите тарифный план
             li.landing-block__list-item Укажите ИНН, БИК и номер расчетного счета
             li.landing-block__list-item Принимайте платежи на расчетный счет
-          a.landing-block__link.button-link Выбрать тариф
-        .landing-block__photo
+          a.landing-block__link.button-link( href="./tariffs.html" ) Выбрать тариф
+        .landing-block__photos
           picture
             source(srcset="img/step2@1x.png 1x, img/step2@2x.png 2x")
             img(src="img/step2@1x.png" alt="")
@@ -49,7 +50,7 @@ block content
             li.landing-block__list-item Создание событий в стандартных календарях
             li.landing-block__list-item Гибкие правила отмены занятий
             li.landing-block__list-item Управление расписанием
-        .landing-block__photo
+        .landing-block__photos
           picture
             source(srcset="img/step3@1x.png 1x, img/step3@2x.png 2x")
             img(src="img/step3@1x.png" alt="")

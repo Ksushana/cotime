@@ -1,0 +1,30 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Тарифы';
+  - let isTariffs = true;
+
+block content
+  .container
+    .documents
+      .documents__title Юридические документы
+      .documents__list
+        .documents__list-item
+          a(href="#")
+            +svg("doc", "20", "28" )
+            | Политика обработки персональных данных
+        .documents__list-item
+          a(href="#")
+            +svg("doc", "20", "28" )
+            | Правила дистанционного обслуживания
+        .documents__list-item
+          a(href="#")
+            +svg("doc", "20", "28" )
+            | Оферты 1С
+        .documents__list-item
+          a(href="#")
+            +svg("doc", "20", "28" )
+            | Регламент приёма исполнительных документов
+
+
+
