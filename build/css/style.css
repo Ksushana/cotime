@@ -5464,13 +5464,16 @@ p.phone-form-note a {
   font-size: 23px;
   line-height: 37px;
   color: #3773e0;
+  margin-bottom: 14px;
+}
+
+.documents__list-item a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 14px;
 }
 
 .documents__list-item svg {
