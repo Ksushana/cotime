@@ -1,0 +1,126 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Главная';
+  - let isLanding = true;
+
+block content
+
+    .intro
+      h1.intro__header Запись на онлайн-занятия и&nbsp;их&nbsp;оплата
+      a.blue-btn.intro__btn(href="./new-event.html") Создать занятие
+
+    .container
+      .landing-block
+        .landing-block__text
+          h2.landing-block__title Йога, коучинг, психотерапия, английский
+          p.landing-block__note Вы проводите онлайн–занятия — мы организуем работу с расписанием
+          ul.landing-block__list
+            li.landing-block__list-item Создайте и расшарьте расписание занятий
+            li.landing-block__list-item Участники выберут время и запишутся
+            li.landing-block__list-item Мы создадим встречи в ваших календарях
+            li.landing-block__list-item Управляйте своим расписанием из личного кабинете
+        .landing-block__photo
+          picture
+            source(srcset="img/step1@1x.png 1x, img/step1@2x.png 2x")
+            img(src="img/step1@1x.png" alt="")
+
+      .landing-block
+        .landing-block__text
+          h2.landing-block__title Онлайн-платежи, онлайн-кассы, чеки и эквайринг
+          p.landing-block__note Выберите тарифный план, принимайте платежи на расчетный счет, все документы доступны онлайн
+          ul.landing-block__list
+            li.landing-block__list-item Выберите и подключите тарифный план
+            li.landing-block__list-item Укажите ИНН, БИК и номер расчетного счета
+            li.landing-block__list-item Принимайте платежи на расчетный счет
+          a.landing-block__link.button-link Выбрать тариф
+        .landing-block__photo
+          picture
+            source(srcset="img/step2@1x.png 1x, img/step2@2x.png 2x")
+            img(src="img/step2@1x.png" alt="")
+
+      .landing-block
+        .landing-block__text
+          h2.landing-block__title Тактико-технические характеристики
+          ul.landing-block__list
+            li.landing-block__list-item Создание индивидуальных и групповых занятий
+            li.landing-block__list-item Создание платных и бесплатных занятий
+            li.landing-block__list-item Прием онлайн-платежей на расчетный счет
+            li.landing-block__list-item Создание событий в стандартных календарях
+            li.landing-block__list-item Гибкие правила отмены занятий
+            li.landing-block__list-item Управление расписанием
+        .landing-block__photo
+          picture
+            source(srcset="img/step3@1x.png 1x, img/step3@2x.png 2x")
+            img(src="img/step3@1x.png" alt="")
+
+    .tariffs
+      h2.tariffs__title Классные цены за&nbsp;классный сервис
+      ul.tariffs__list
+        li.tariffs__list-item
+          h3.tariffs__list-item-title Hobby
+          span.tariffs__price Бесплатно
+          p.tariffs__text Создание бесплатных индивидуальных и групповых занятий
+        li.tariffs__list-item
+          h3.tariffs__list-item-title Part time
+          span.tariffs__price 999 рублей в месяц
+          p.tariffs__text Создание платных занятий 5,9%&nbsp;за&nbsp;онлайн-платежи
+        li.tariffs__list-item
+          h3.tariffs__list-item-title Business
+          span.tariffs__price 1999 рублей в месяц
+          p.tariffs__text Создание курсов занятий 2,9%&nbsp;за&nbsp;онлайн-платежи
+      a.tariffs__links(href="./tariffs.html") Тарифы подробно
+
+    .container
+      .cases
+        h2.cases__title Наши любимые кейсы
+        .cases__radio
+          input.cases__radio-1.visually-hidden( type="radio" name="cases" id="cases-btn-1" checked )
+          input.cases__radio-2.visually-hidden( type="radio" name="cases" id="cases-btn-2" )
+          input.cases__radio-3.visually-hidden( type="radio" name="cases" id="cases-btn-3" )
+          input.cases__radio-4.visually-hidden( type="radio" name="cases" id="cases-btn-4" )
+        .cases__labels
+          label.cases__control.cases__control--coach.cases__control--active( for="cases-btn-1" ) Коуч
+          label.cases__control.cases__control--trainer( for="cases-btn-2" ) Тренер
+          label.cases__control.cases__control--therapist( for="cases-btn-3" ) Психотерапевт
+          label.cases__control.cases__control--tutor( for="cases-btn-4" ) Репетитор
+        ul.cases__blocks
+          li.cases__block.cases__block--coach
+            p.cases__text Это Андрей — он профессиональный коуч и создатель программы трансформационного лидерства Эволюция. Эволюция — дорогое удовольствие и коучинговая сессия лично у Андрея тоже. Деньги придут на счет ИП Андрея и он заплатит все налоги.
+            p.cases__name
+              picture
+                source(srcset="img/avatar@1x.png 1x, img/avatar@2x.png 2x")
+                img(src="img/avatar@1x.png" alt="")
+              span Екатерина Пылаева 1
+          li.cases__block.cases__block--trainer.visually-hidden
+            p.cases__text Это Андрей — он профессиональный коуч и создатель программы трансформационного лидерства Эволюция. Эволюция — дорогое удовольствие и коучинговая сессия лично у Андрея тоже. Деньги придут на счет ИП Андрея и он заплатит все налоги.
+            p.cases__name
+              picture
+                source(srcset="img/avatar@1x.png 1x, img/avatar@2x.png 2x")
+                img(src="img/avatar@1x.png" alt="")
+              span Екатерина Пылаева 2
+          li.cases__block.cases__block--therapist.visually-hidden
+            p.cases__text Это Андрей — он профессиональный коуч и создатель программы трансформационного лидерства Эволюция. Эволюция — дорогое удовольствие и коучинговая сессия лично у Андрея тоже. Деньги придут на счет ИП Андрея и он заплатит все налоги.
+            p.cases__name
+              picture
+                source(srcset="img/avatar@1x.png 1x, img/avatar@2x.png 2x")
+                img(src="img/avatar@1x.png" alt="")
+              span Екатерина Пылаева 3
+          li.cases__block.cases__block--tutor.visually-hidden
+            p.cases__text Это Андрей — он профессиональный коуч и создатель программы трансформационного лидерства Эволюция. Эволюция — дорогое удовольствие и коучинговая сессия лично у Андрея тоже. Деньги придут на счет ИП Андрея и он заплатит все налоги.
+            p.cases__name
+              picture
+                source(srcset="img/avatar@1x.png 1x, img/avatar@2x.png 2x")
+                img(src="img/avatar@1x.png" alt="")
+              span Екатерина Пылаева 4
+
+    .try
+      .try__inner.try__inner--after-start
+        h2.try__title Хотите попробовать?
+        p.try__text Вы проводите онлайн-занятия?
+        a.blue-btn.try__btn(href="./new-event.html") Записаться
+      .try__inner.try__inner--before-start
+        h2.try__title Скоро начинаем
+        p.try__text 31 октября Cotime заработает в полную силу. До этого момента нам нужно еще много всего настроить, проверить, понять, запрограммировать.  Нам очень нужна помощь ведущих онлайн-занятий. Мы ищем тех, кто готов с нами два месяца экспериментировать и вместе создавать Cotime. В обмен мы вы получите полгода бесплатного доступа  к тарифу BUSINESS
+        a.blue-btn.try__btn(href="./new-event.html") Хочу помочь
+        a.try__link.button-link Напишите про свой кейс

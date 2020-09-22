@@ -1,0 +1,46 @@
+.try {
+  background-color: $color-light-grey;
+  display: flex;
+
+  &__inner {
+    max-width: 589px;
+    margin: 72px auto 102px;
+    display: flex;
+    flex-direction: column;
+
+    &--after-start {
+      display: none;
+      .try__title {
+        margin: 0;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 65px;
+    line-height: 75px;
+    text-align: center;
+    margin: 0 0 54px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    color: #484F60;
+    text-align: center;
+    margin: 0 0 31px;
+  }
+
+  &__btn {
+    height: 60px;
+    width: 253px;
+    margin: 0 auto;
+  }
+
+  &__link {
+    background-color: transparent;
+    margin: 29px auto 0;
+  }
+}

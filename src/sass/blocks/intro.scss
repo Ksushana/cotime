@@ -1,0 +1,15 @@
+.intro {
+  padding: 240px 100px 90px;
+  background-color: $color-landing-pink;
+
+  &__header {
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 80px;
+    margin-bottom: 50px;
+  }
+
+  &__btn {
+    width: 253px;
+  }
+}

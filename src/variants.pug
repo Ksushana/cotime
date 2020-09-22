@@ -2,9 +2,10 @@ extends pug/layout.pug
 
 block variables
   - let title = 'Варианты использования';
+  - let isEvent = true;
 
 block content
-  .container
+  .container.container--event
     .line.step3
 
     form.var-form(method="post")

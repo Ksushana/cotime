@@ -2,9 +2,10 @@ extends pug/layout.pug
 
 block variables
   - let title = 'Форма заявки';
+  - let isEvent = true;
 
 block content
-  .container
+  .container.container--event
     .line.step1
     h1.visually-hidden #{title}
 

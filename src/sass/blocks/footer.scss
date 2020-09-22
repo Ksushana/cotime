@@ -1,0 +1,50 @@
+.footer {
+  display: flex;
+
+  &__inner {
+    width: calc(100vw - 200px);
+    margin: 67px auto 165px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 39px;
+  }
+
+  &__logo {
+    font-size: 20px;
+    line-height: 35px;
+    color: $color-text-grey;
+  }
+
+  &__links {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 35px;
+    display: flex;
+
+    button {
+      @include btn-reset;
+      margin-left: 29px;
+    }
+  }
+
+  &__link {
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 9px;
+    }
+  }
+
+  &__note {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+    color: $color-text-grey;
+    padding-right: 128px;
+  }
+}

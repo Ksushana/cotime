@@ -1,0 +1,66 @@
+.tariffs {
+  padding: 98px 102px 60px;
+  display: flex;
+  flex-direction: column;
+
+  background-color: $color-landing-pink;
+
+  &__title {
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 70px;
+    margin: 0 0 20px;
+    width: 50%;
+  }
+
+  &__list {
+    @include list-reset;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+
+  }
+
+  &__list-item {
+    background-color: $color-white;
+    padding: 42px 60px 40px 42px;
+  }
+
+  &__list-item-title {
+    margin: 0 0 13px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: $color-btn-blue;
+    margin-bottom: 7px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  &__links {
+    margin: 33px auto 0;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      border-left: 1px solid $color-black;
+      border-top: 1px solid $color-black;
+      transform: rotate(135deg);
+      top: calc(50% - 5px);
+      right: -14px;
+    }
+  }
+}

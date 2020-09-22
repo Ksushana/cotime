@@ -12,15 +12,16 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header is-event">
     <div class="header__logo"><img src="img/logo.svg" alt="logo" width="108" height="20"></div>
-    <div class="header__account">
-      <p>Maksimova M.</p>
+    <div class="header__links hide"><a class="header__link" href="./prices">Тарифы</a><a class="header__link" href="./faq">Вопросы и ответы</a><a class="header__link" href="./new-event">+ Создать занятие</a></div>
+    <div class="header__account header__account--logged"><a class="header__link header__link--enter" href="">Войти</a>
+      <p class="header__account--name">Maksimova M.</p>
     </div>
     <div class="header__kebab"></div>
   </header>
   <main>
-    <div class="container">
+    <div class="container container--event">
       <div class="line step2"></div>
       <form class="phone-form" method="post">
         <h1>Введите номер телефона</h1>
@@ -28,6 +29,17 @@
       </form>
     </div>
   </main>
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__logo">© Cotime</div>
+        <div class="footer__links"><a class="footer__link" href="./prices">Тарифы</a><a class="footer__link" href="./faq">Вопросы и ответы</a><a class="footer__link" href="./documents">Документы</a><a class="footer__link footer__link--email" href="mailto:hi@cotime.io"><svg width="19" height="15" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#letter"></use>
+            </svg>hi@cotime.io</a><button class="footer__link" type="button">En</button></div>
+      </div>
+      <div class="footer__note">Мы используем cookies для сбора обезличенных персональных данных. Они помогают настраивать рекламу и анализировать трафик.<br> Оставаясь на сайте, вы соглашаетесь на сбор таких данных.</div>
+      </div>
+  </footer>
   <script src="js/script.min.js"></script>
 </body>
 

@@ -1,0 +1,126 @@
+.cases {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 50px;
+    margin: 11px 0 37px;
+  }
+
+  &__labels {
+    display: flex;
+
+  }
+
+  &__control {
+    margin-right: 20px;
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 15px 15px 15px 57px;
+    position: relative;
+    border-radius: 45px;
+    height: 55px;
+    background-color: transparent;
+    transition: all 0.3s;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      transition: all 0.3s;
+      top: 7px;
+      left: 9px;
+    }
+
+    &--active {
+      color: $color-white;
+    }
+
+    &--coach {
+      &::before {
+        background-color: $color-purple;
+      }
+
+       &.cases__control--active {
+        background-color: $color-purple;
+      }
+    }
+
+    &--trainer {
+      &::before {
+        background-color: $color-lila;
+      }
+
+      &.cases__control--active {
+        background-color: $color-lila;
+      }
+
+    }
+
+    &--therapist {
+      &::before {
+        background-color: $color-green-dark;
+      }
+
+      &.cases__control--active {
+        background-color: $color-green-dark;
+      }
+
+    }
+
+    &--tutor {
+      &::before {
+        background-color: $color-orange-btn;
+      }
+      &.cases__control--active {
+        background-color: $color-orange-btn;
+      }
+
+    }
+
+    &--active::before {
+      background-color: $color-white;
+    }
+
+
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__blocks {
+    @include list-reset;
+    max-width: 729px;
+    margin-top: 33px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 37px;
+    color: #484F60;;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 49px;
+      height: 49px;
+      border-radius: 50%;
+      margin-right: 11px;
+    }
+  }
+}

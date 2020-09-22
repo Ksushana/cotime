@@ -2,9 +2,10 @@ extends pug/layout.pug
 
 block variables
   - let title = 'Индивидуальное соматическое занятие';
+  - let isEvent = true;
 
 block content
-  .container
+  .container.container--event
     .event
       h1 #{title}
       .event__block

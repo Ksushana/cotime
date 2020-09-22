@@ -1,3 +1,5 @@
+include svg
+
 block variables
 - let mainTitle = "Cotime";
 
@@ -13,16 +15,37 @@ html( lang="ru" )
     link( rel="stylesheet" href="css/style.min.css" )
 
   body
-    header.header
+    header.header( class=(isEvent ? "is-event" : null) )
       .header__logo
         img(src="img/logo.svg", alt="logo", width="108", height="20")
-      .header__account
-        p Maksimova M.
+      .header__links( class=(isEvent ? "hide" : null) )
+        a.header__link(href="./prices") Тарифы
+        a.header__link(href="./faq") Вопросы и ответы
+        a.header__link(href="./new-event") + Создать занятие
+      .header__account.header__account--logged
+        a.header__link.header__link--enter(href="") Войти
+        p.header__account--name Maksimova M.
       .header__kebab
 
 
     main
       block content
+
+    footer.footer
+      .footer__inner
+        .footer__top
+          .footer__logo © Cotime
+          .footer__links
+            a.footer__link(href="./prices") Тарифы
+            a.footer__link(href="./faq") Вопросы и ответы
+            a.footer__link(href="./documents") Документы
+            a.footer__link.footer__link--email(href="mailto:hi@cotime.io")
+              +svg("letter", "19", "15")
+              | hi@cotime.io
+            button.footer__link(type="button") En
+        .footer__note
+          | Мы используем cookies для сбора обезличенных персональных данных. Они помогают настраивать рекламу и анализировать трафик.<br> Оставаясь на сайте, вы соглашаетесь на сбор таких данных.
+
 
     block scripts
       script( src="js/script.min.js" )

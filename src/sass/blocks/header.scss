@@ -1,79 +1,156 @@
 .header {
   height: 80px;
-  background-color: $color-white;
-  padding: 31px 41px;
+
+
+  padding: 67px 102px 50px 125px;
 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  height: 160px;
+
+  z-index: 100;
+  background-color: transparent;
+
+  &__logo img {
+    width: 172px;
+    height: 32px;
+  }
+
+  &.is-event {
+    position: static;
+    padding: 31px 41px;
+
+    font-size: 17px;
+    line-height: 27px;
+
+    height: 80px;
+
+    background-color: $color-white;
+
+    .header__logo img {
+      width: 108px;
+      height: 20px;
+    }
+
+    .header__account {
+      font-weight: 300;
+    }
+  }
 
   @include mobile {
     height: 60px;
     padding: 18px 21px;
   }
-}
 
-.header__account {
-  font-weight: 300;
-  font-size: 17px;
-  line-height: 27px;
-  text-align: right;
-  color: $color-black;
 
-  @include mobile {
-    display: none;
-  }
+  &__account {
 
-  p {
-    margin: 0;
-    padding-right: 23px;
-    position: relative;
+    text-align: right;
+    color: $color-black;
 
-    &::after {
-      position: absolute;
-      content: "";
-      width: 9px;
-      height: 9px;
-      border-bottom: 1px solid $color-black;
-      border-right: 1px solid $color-black;
-      transform: rotate(45deg);
-      right: 6px;
-      top: 5px;
+    @include mobile {
+      display: none;
+    }
+
+    &--name {
+      margin: 0;
+      padding-right: 23px;
+      position: relative;
+      display: none;
+      margin-left: 30px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 9px;
+        height: 9px;
+        border-bottom: 1px solid $color-black;
+        border-right: 1px solid $color-black;
+        transform: rotate(45deg);
+        right: 6px;
+        top: 5px;
+      }
+    }
+
+    .header__link--enter {
+      display: block;
+    }
+
+    &--logged {
+      .header__link--enter {
+        display: none;
+      }
+
+      .header__account--name {
+        display: block;
+      }
     }
   }
-}
 
-.header__kebab {
-  display: none;
+  &__kebab {
+    display: none;
 
-  @include mobile {
-    display: block;
-    position: relative;
-    width: 6px;
-    height: 6px;
-    background: #a2aabd;
-    border-radius: 50%;
-    margin-right: 8px;
-    margin-top: 9px;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
+    @include mobile {
+      display: block;
+      position: relative;
       width: 6px;
       height: 6px;
       background: #a2aabd;
       border-radius: 50%;
-    }
+      margin-right: 8px;
+      margin-top: 9px;
 
-    &::before {
-      top: 0;
-      left: -9px;
-    }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: #a2aabd;
+        border-radius: 50%;
+      }
 
-    &::after {
-      top: 0;
-      right: -9px;
+      &::before {
+        top: 0;
+        left: -9px;
+      }
+
+      &::after {
+        top: 0;
+        right: -9px;
+      }
+    }
+  }
+
+  &__links {
+    margin-left: auto;
+    &.hide {
+      display: none;
+    }
+  }
+
+  &__link {
+    margin-left: 30px;
+
+    &--enter {
+      width: 84px;
+      height: 39px;
+      display: block;
+      border: 1px solid rgba(#000000, 0.4);
+      border-radius: 2px;
+      padding: 4px 4px 8px;
+      line-height: 30px;
+      text-align: center;
     }
   }
 }
