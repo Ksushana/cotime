@@ -12,12 +12,11 @@ $(function () {
   const button = form.find("button.blue-btn");
 
   const validate = () => {
-    // var inputVal = phoneInput.value.length;
-    // if (inputVal === 5 ) {
-    //   alert("1");
-    //   return true;
-    // }
-    // return false;
+    var inputVal = phoneInput.val();
+    if (inputVal && inputVal.length === 18 ) {
+      return true;
+    }
+    return false;
   };
 
   const enableForm = () => {
