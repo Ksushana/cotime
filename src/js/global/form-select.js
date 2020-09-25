@@ -1,10 +1,12 @@
-"use strict";
 
-// инициализация селект2
-(function ($) {
-  $(document).ready(function () {
-    $(".custom-select").select2({
-      width: "200px",
-    });
-  });
-})(window.jQuery);
+(() => {
+  let selects = document.querySelectorAll(`select.custom-select`);
+
+  for (let select of selects) {
+    (() => new window.CustomSelect({
+      elem: select.id
+    }))();
+  }
+
+})();
+

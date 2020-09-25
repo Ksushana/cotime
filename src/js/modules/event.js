@@ -1,6 +1,40 @@
 $(function () {
-  $("#phone").mask("+7 (999) 999-9999", { placeholder: "+7" });
   $("#code").mask("9", { placeholder: " " });
+});
+
+$(function () {
+  const form = $(".phone-form");
+  if (!form) {
+    return;
+  }
+
+  const phoneInput = form.find("#phone");
+  const button = form.find("button.blue-btn");
+
+  const validate = () => {
+    // var inputVal = phoneInput.value.length;
+    // if (inputVal === 5 ) {
+    //   alert("1");
+    //   return true;
+    // }
+    // return false;
+  };
+
+  const enableForm = () => {
+    button.prop("disabled", false);
+  };
+
+  const disableForm = () => {
+    button.prop("disabled", true);
+  };
+
+  phoneInput.on("input", () => {
+    if (validate()) {
+      enableForm();
+    } else {
+      disableForm();
+    }
+  });
 });
 
 $(function () {

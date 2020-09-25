@@ -119,6 +119,7 @@ button {
   color: $color-btn-blue;
   background-color: $color-white;
   outline: none;
+  padding: 0;
 
   @include mobile {
     font-size: 17px;

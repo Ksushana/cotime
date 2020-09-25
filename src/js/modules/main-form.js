@@ -6,13 +6,23 @@ $(function () {
 
   const nameInput = mainForm.find(".main-form__name");
 
+  const changeColorClass = (el, newColor) => {
+    el.removeClass((_, className) => {
+      return (className.match (/(^|\s)color-\S+/g) || []).join(' ');
+    });
+    el.addClass(`color-${newColor}`);
+  }
+
   const colorButtons = mainForm.find(".main-form__color label");
   colorButtons.on("click", (evt) => {
     const target = evt.target;
     const button = $(target);
     const color = button.css("background-color");
     nameInput.css("background-color", color);
-    nameInput.css("color", "#ffffff");
+    const colorName = button.prop('for');
+    // nameInput.css("color", "#ffffff");
+    changeColorClass(nameInput, colorName);
+    // console.log(nameInput.prop("class"))
   });
 
   const participantsInput = mainForm.find(".main-form__participants");

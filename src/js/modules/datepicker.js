@@ -56,7 +56,12 @@ $(function () {
     numberOfMonths: 50,
     language: "ru",
     shortYearCutoff: 50,
+    onSelect: function() {
+      $(this).addClass("filled");
+    }
   });
+
+
 
   const addDays = () => {
     $(".ui-datepicker").append(

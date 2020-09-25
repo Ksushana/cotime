@@ -23,42 +23,46 @@
       <div class="line step1"></div>
       <h1 class="visually-hidden">Форма заявки</h1>
       <div class="main-form">
-        <form method="post"><textarea class="main-form__name" placeholder="Название" valign="bottom"></textarea>
-          <div class="main-form__color"><input type="radio" id="lila" name="color" value="lila"><label class="lila" for="lila"></label><input type="radio" id="violet" name="color" value="violet"><label class="violet" for="violet"></label><input type="radio" id="blue" name="color" value="blue"><label class="blue" for="blue"></label><input type="radio" id="lightgreen" name="color" value="lightgreen"><label class="lightgreen" for="lightgreen"></label><input type="radio" id="green" name="color" value="green"><label class="green" for="green"></label><input type="radio" id="orange" name="color" value="orange"><label class="orange" for="orange"></label><input type="radio" id="yellow" name="color" value="yellow"><label class="yellow" for="yellow"></label></div>
-          <div class="main-form__inputs"><input class="main-form__discription" type="text" placeholder="Описание"><input class="main-form__link" type="text" placeholder="Ссылка на онлайн-занятие">
-            <div class="main-form__input main-form__price-block"><input class="main-form__price" type="text" id="price" autocomplete="off"><label class="form-label price-label" for="price">Цена</label></div>
-            <div class="main-form__part-input main-form__input"><input class="main-form__participants" type="number" id="max" min="1" autocomplete="off"><label class="form-label" for="max">Максимум участников</label>
+        <form method="post"><textarea class="main-form__name" placeholder="Название" valign="bottom" style="background-color: rgb(166, 57, 135); color: rgb(255, 255, 255);"></textarea>
+          <div class="main-form__color"><input type="radio" id="lila" name="color" value="lila" checked><label class="lila" for="lila" data-text-color="green"></label><input type="radio" id="violet" name="color" value="violet"><label class="violet" for="violet"></label><input type="radio" id="blue" name="color" value="blue"><label class="blue" for="blue"></label><input type="radio" id="lightgreen" name="color" value="lightgreen"><label class="lightgreen" for="lightgreen"></label><input type="radio" id="green" name="color" value="green"><label class="green" for="green"></label><input type="radio" id="orange" name="color" value="orange"><label class="orange" for="orange"></label><input type="radio" id="yellow" name="color" value="yellow"><label class="yellow" for="yellow"></label></div>
+          <div class="main-form__inputs">
+            <div class="main-form__field main-form__field--long"><input class="form__input main-form__discription" type="text" id="discription"><label class="main-form__field-label" for="discription">Описание</label></div>
+            <div class="main-form__field main-form__field--long"><input class="form__input main-form__link" type="text" id="link"><label class="main-form__field-label" for="link">Ссылка (Zoom, Meet)</label></div>
+            <div class="main-form__input main-form__price-block main-form__field"><input class="form__input main-form__price" type="text" id="price" autocomplete="off"><label class="main-form__field-label price-label" for="price">Цена</label></div>
+            <div class="main-form__part-input main-form__input main-form__field"><input class="form__input main-form__participants" type="number" id="max" min="1" autocomplete="off"><label class="main-form__field-label" for="max">Максимум участников</label>
               <div class="tooltip tooltip--hidden">
                 <p>Групповые занятия доступны с тарифами <a href="#">BASIC</a> и <a href="#">PRO</a>. Для индивидуальных занятий оформление онлайн-занятия бесплатно .</p><button type="button">Понятно</button>
               </div>
             </div>
-            <div class="main-form__select main-form__select--big main-form__input"><select class="main-form__duration custom-select" id="duration" name="duration[]">
+            <div class="main-form__select main-form__select--big main-form__input main-form__field"><select class="main-form__duration custom-select" id="duration" name="duration[]">
+                <option value="0"></option>
                 <option value="45">45 минут</option>
                 <option value="1">1 час</option>
                 <option value="2">2 часа</option>
-              </select><label class="form-label" for="duration">Длительность</label></div>
+              </select><label class="main-form__field-label" for="duration">Длительность</label></div>
           </div>
           <div class="main-form__dates-block"><template class="time">
-              <div class="main-form__input"><input class="timepicker" type="text" autocomplete="off" placeholder=""><label class="form-label">Время</label><span class="close"></span></div>
+              <div class="main-form__input main-form__field"><input class="form__input timepicker" type="text" autocomplete="off" placeholder=""><label class="main-form__field-label">Время</label><span class="close"></span></div>
             </template><template class="date">
               <div class="main-form__date">
-                <div class="main-form__input"><input class="datepicker" type="text" autocomplete="off"><label class="form-label">Дата</label></div>
+                <div class="main-form__input main-form__field main-form__input-date"><input class="datepicker" type="text" autocomplete="off"><label class="main-form__field-label">Дата</label></div>
                 <div class="main-form__date-times">
-                  <div class="main-form__input"><input class="timepicker" type="text" autocomplete="off" placeholder=""><label class="form-label">Время</label></div>
+                  <div class="main-form__input main-form__field"><input class="form__input timepicker" type="text" autocomplete="off" placeholder=""><label class="main-form__field-label">Время</label></div>
                 </div><button class="main-form__addtime"></button>
               </div>
             </template>
             <div class="main-form__dates">
               <div class="main-form__date">
-                <div class="main-form__input"><input class="datepicker" type="text" id="date" autocomplete="off"><label class="form-label" for="date">Дата</label></div>
+                <div class="main-form__input main-form__field main-form__input-date"><input class="form__input datepicker" type="text" id="date" autocomplete="off"><label class="main-form__field-label" for="date">Дата</label></div>
                 <div class="main-form__date-times">
-                  <div class="main-form__input"><input class="timepicker" type="text" id="time" autocomplete="off" placeholder=""><label class="form-label" for="time">Время</label></div>
+                  <div class="main-form__input main-form__field"><input class="form__input timepicker" type="text" id="time" autocomplete="off" placeholder=""><label class="main-form__field-label" for="time">Время</label></div>
                 </div><button class="main-form__addtime"></button>
               </div>
             </div><button class="main-form__adddate button-link">Добавить дату</button>
           </div>
           <div class="main-form__inputs main-form__inputs--big">
-            <div class="main-form__input"><input class="main-form__instructor" type="text" id="instructor"><label class="form-label" for="instructor">Имя и фамилия ведущего</label></div><input class="main-form__tags" type="text" placeholder="Добавить теги">
+            <div class="main-form__input main-form__field"><input class="form__input main-form__instructor" type="text" id="instructor"><label class="main-form__field-label" for="instructor">Имя и фамилия ведущего</label></div>
+            <div class="main-form__input main-form__field"><input class="form__input main-form__tags" type="text" id="tags"><label class="main-form__field-label" for="tags">Добавить теги</label></div>
           </div><button class="blue-btn" type="submit" disabled>Создать</button></form>
       </div>
     </div>
