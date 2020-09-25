@@ -396,18 +396,6 @@ input {
   }
 }
 
-  // .main-form__discription::placeholder,
-  // .main-form__link::placeholder {
-  //   font-weight: 300;
-  //   font-size: 20px;
-  //   line-height: 30px;
-  //   font-family: inherit;
-
-  //   @include mobile {
-  //     font-size: 17px;
-  //   }
-  // }
-
 .main-form__price,
 .main-form__participants,
 .main-form__duration,
@@ -463,42 +451,6 @@ input {
   &--big {
     width: 200px;
   }
-
-  span.select2 {
-    border-bottom: 1px solid #ced3de;
-    margin-top: 60px;
-    height: 40px;
-    display: block;
-    padding-bottom: 6px;
-
-    @include mobile {
-      margin-top: 21px;
-      width: 100% !important;
-    }
-  }
-
-  .select2-container--default .select2-selection--single {
-    border: none;
-    outline: none;
-  }
-
-  .select2-container--default
-    .select2-selection--single
-    .select2-selection__rendered {
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 30px;
-    color: $color-black;
-    padding: 0;
-
-    @include mobile {
-      font-size: 17px;
-    }
-  }
-
-  .select2-selection__arrow {
-    display: none;
-  }
 }
 
 .js-Dropdown-list {
@@ -522,11 +474,6 @@ input {
       background-color: $color-lightblue;
     }
   }
-}
-
-.select2-container--default
-  .select2-results__option--highlighted[aria-selected] {
-
 }
 
 .main-form__date {

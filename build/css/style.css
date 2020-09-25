@@ -1568,11 +1568,11 @@ a.ui-button:active,
 
 .ui-icon,
 .ui-widget-content .ui-icon {
-  background-image: url("images/ui-icons_222222_256x240.png");
+  background-image: none;
 }
 
 .ui-widget-header .ui-icon {
-  background-image: url("images/ui-icons_222222_256x240.png");
+  background-image: none;
 }
 
 .ui-state-hover .ui-icon,
@@ -3529,48 +3529,6 @@ input {
 
 .main-form__select--big {
   width: 200px;
-}
-
-.main-form__select span.select2 {
-  border-bottom: 1px solid #ced3de;
-  margin-top: 60px;
-  height: 40px;
-  display: block;
-  padding-bottom: 6px;
-}
-
-@media (max-width: 799px) {
-  .main-form__select span.select2 {
-    margin-top: 21px;
-    width: 100% !important;
-  }
-}
-
-.main-form__select .select2-container--default .select2-selection--single {
-  border: none;
-  outline: none;
-}
-
-.main-form__select .select2-container--default
-.select2-selection--single
-.select2-selection__rendered {
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 30px;
-  color: #000000;
-  padding: 0;
-}
-
-@media (max-width: 799px) {
-  .main-form__select .select2-container--default
-.select2-selection--single
-.select2-selection__rendered {
-    font-size: 17px;
-  }
-}
-
-.main-form__select .select2-selection__arrow {
-  display: none;
 }
 
 .js-Dropdown-list {
