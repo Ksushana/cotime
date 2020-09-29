@@ -1,0 +1,33 @@
+.personal-data {
+  input {
+    transition: all 0.2s;
+
+    &:focus {
+      border-bottom: 1px solid #3773e0;
+    }
+  }
+
+  .main-form__field {
+    &:first-child {
+      height: 60px;
+
+      input {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 60px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  &__account {
+    margin-top: 76px;
+  }
+}

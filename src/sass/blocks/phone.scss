@@ -2,10 +2,12 @@
   width: 600px;
   margin: auto;
   background-color: $color-white;
-  padding: 58px 80px 64px;
+  padding: 91px 80px 64px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+
+
 
   .blue-btn:disabled {
     opacity: 0.4;
@@ -27,7 +29,8 @@
     font-size: 30px;
     line-height: 40px;
     color: $color-black;
-    margin-bottom: 0;
+    margin: 0;
+
 
     @include mobile {
       font-weight: 500;
@@ -36,7 +39,7 @@
     }
   }
 
-  p {
+  &__intro {
     margin-top: 22px;
     margin-bottom: 42px;
     font-weight: 300;
@@ -51,6 +54,14 @@
     }
   }
 
+  &__send-again {
+    margin: 0 auto 27px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    color: $color-text-grey;
+  }
+
   input {
     height: 44px;
     padding: 7px 0;
@@ -61,57 +72,79 @@
   .button-link {
     margin: 22px auto 0;
   }
-}
 
-.phone-form__code {
-  display: flex;
-  margin-top: 4px;
-  margin-bottom: 2px;
-
-  @include mobile {
-    justify-content: center;
+  &--subscribe {
+    padding: 101px 80px 90px;
   }
 
-  input {
-    width: 65px;
-    height: 84px;
-    border: 1px solid $color-border-grey;
-    font-size: 46px;
-    line-height: 46px;
-    text-align: center;
+
+  &__code {
+    display: flex;
+    margin-top: 45px;
+    margin-bottom: 2px;
+
+
 
     @include mobile {
-      width: 38px;
-      height: 61px;
-
-      font-size: 30px;
-      line-height: 30px;
+      justify-content: center;
     }
 
-    &:nth-of-type(2),
-    &:nth-of-type(5) {
-      border-right: 0;
-      border-left: 0;
+    input {
+      width: 65px;
+      height: 84px;
+      border: 1px solid $color-border-grey;
+      font-size: 46px;
+      line-height: 46px;
+      text-align: center;
+
+      @include mobile {
+        width: 38px;
+        height: 61px;
+
+        font-size: 30px;
+        line-height: 30px;
+      }
+
+      &:nth-of-type(2),
+      &:nth-of-type(5) {
+        border-right: 0;
+        border-left: 0;
+      }
+
+      &:focus {
+        border-color: $color-btn-blue;
+      }
+
+      &:focus:nth-of-type(2),
+      &:focus:nth-of-type(5) {
+        border-right: 1px solid $color-blue;
+        border-left: 1px solid $color-blue;
+      }
     }
 
-    &:focus {
-      border-color: $color-btn-blue;
+    span {
+      padding: 32px 20px 0;
+      display: block;
+      height: 84px;
+
+      @include mobile {
+        padding: 21px 20px 0;
+      }
     }
 
-    &:focus:nth-of-type(2),
-    &:focus:nth-of-type(5) {
-      border-right: 1px solid $color-blue;
-      border-left: 1px solid $color-blue;
-    }
-  }
+    &--subscribe {
+      width: 260px;
+      margin: 55px auto 0;
 
-  span {
-    padding: 32px 20px 0;
-    display: block;
-    height: 84px;
+      input {
+        &:nth-of-type(3) {
+          border-right: 0;
+        }
 
-    @include mobile {
-      padding: 21px 20px 0;
+        &:focus:nth-of-type(3) {
+          border-right: 1px solid $color-blue;
+        }
+      }
     }
   }
 }

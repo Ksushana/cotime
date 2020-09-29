@@ -1,0 +1,45 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Список событий';
+  - let isEvent = true;
+
+block content
+  .container.container--event
+    h1.visually-hidden #{title}
+
+    .events-list
+      .event.event__list
+        .event__block
+          .event__description-list-block
+            .event__description-header
+              .event__description-photo
+                span AC
+              .event__description-lead
+                p.event__description-name Екатерина Пылаева
+                p.event__description-text GLP Feedback
+                p.event__description-text GLP Feedback
+            .event__description-list
+              .event__description-list-item
+                h2.event__title.purple
+                  span Встреча с консультантом по развитию
+                .event__description-body
+                  p Идея в том, чтобы ощутить детально, как при движении тело создает волну, задействуя все двигательные части, и научиться управлять ею, делая эту волну более амплитудной или совсем незаметной. Для этого надо чтобы все суставы в теле были подвижны во всех возможных направлениях и имели связи друг с другом, причем чем легче и мягче будут связи, тем плавнее будет волна.
+                  .event__info
+                    p.event__info-price Цена – 5000 рублей
+                    p.event__info-duration Длительность – 2 часа
+                  .choose-date.choose-date--full-page
+                    form(action="post")
+                      input(type="radio" id="24" name="date" value="24" checked)
+                      label(for="24")
+                        span.date 24 июня
+                        span.time 20:00
+                      input(type="radio" id="25" name="date" value="25")
+                      label(for="25")
+                        span.date 25 июня
+                        span.time 21:00
+                      input(type="radio" id="26" name="date" value="26")
+                      label(for="26")
+                        span.date 26 июня
+                        span.time 22:00
+                      button.blue-btn(type="submit") Записаться

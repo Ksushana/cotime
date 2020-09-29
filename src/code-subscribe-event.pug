@@ -1,0 +1,18 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Введите код из СМС';
+  - let isEvent = true;
+
+block content
+  .container.container--event
+    form.phone-form.phone-form--code.phone-form--code-subscribe(method="post")
+      h1 #{title}
+      .phone-form__code.phone-form__code--subscribe
+        input.group-code( type="text"  maxlength="1" size="1" autofocus )
+        input.group-code( type="text"  maxlength="1" size="1")
+        input.group-code( type="text"  maxlength="1" size="1")
+        input.group-code( type="text"  maxlength="1" size="1")
+      p.phone-form__send-again Отправить еще раз через 23 с
+      button.blue-btn(type="submit") Далее
+      button.button-link(type="submit") Отправить на другой номер

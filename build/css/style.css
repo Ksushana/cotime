@@ -3445,7 +3445,8 @@ input {
 
 .main-form__discription,
 .main-form__link,
-.main-form__instructor {
+.main-form__instructor,
+.main-form__line {
   width: 100%;
   height: 40px;
   border: none;
@@ -3835,7 +3836,7 @@ input {
   width: 600px;
   margin: auto;
   background-color: #ffffff;
-  padding: 58px 80px 64px;
+  padding: 91px 80px 64px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -3869,7 +3870,7 @@ input {
   font-size: 30px;
   line-height: 40px;
   color: #000000;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 @media (max-width: 799px) {
@@ -3880,7 +3881,7 @@ input {
   }
 }
 
-.phone-form p {
+.phone-form__intro {
   margin-top: 22px;
   margin-bottom: 42px;
   font-weight: 300;
@@ -3890,11 +3891,19 @@ input {
 }
 
 @media (max-width: 799px) {
-  .phone-form p {
+  .phone-form__intro {
     font-weight: 300;
     font-size: 17px;
     line-height: 26px;
   }
+}
+
+.phone-form__send-again {
+  margin: 0 auto 27px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  color: #a2aabd;
 }
 
 .phone-form input {
@@ -3908,11 +3917,15 @@ input {
   margin: 22px auto 0;
 }
 
+.phone-form--subscribe {
+  padding: 101px 80px 90px;
+}
+
 .phone-form__code {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 4px;
+  margin-top: 45px;
   margin-bottom: 2px;
 }
 
@@ -3966,6 +3979,19 @@ input {
   .phone-form__code span {
     padding: 21px 20px 0;
   }
+}
+
+.phone-form__code--subscribe {
+  width: 260px;
+  margin: 55px auto 0;
+}
+
+.phone-form__code--subscribe input:nth-of-type(3) {
+  border-right: 0;
+}
+
+.phone-form__code--subscribe input:focus:nth-of-type(3) {
+  border-right: 1px solid #2b65fb;
 }
 
 p.phone-form-note {
@@ -4221,10 +4247,10 @@ p.phone-form-note a {
   padding: 0 55px 74px;
 }
 
-.event h1 {
-  width: calc(100% + 110px);
+.event__title {
+  width: calc(100% + 120px);
   height: 375px;
-  margin-left: -55px;
+  margin-left: -60px;
   margin-top: 0;
   background-color: #a63987;
   padding: 47px 60px;
@@ -4233,6 +4259,49 @@ p.phone-form-note a {
   line-height: 65px;
   color: #ffffff;
   padding-right: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.event__title span {
+  margin-top: auto;
+  display: block;
+}
+
+.event__title.lila {
+  background-color: #a63987;
+}
+
+.event__title.purple {
+  background-color: #5c39a6;
+}
+
+.event__title.blue {
+  background-color: #2b65fb;
+}
+
+.event__title.lightgreen {
+  background-color: #2bbf93;
+}
+
+.event__title.green {
+  background-color: #65a563;
+}
+
+.event__title.orange {
+  background-color: #ff701f;
+}
+
+.event__title.yellow {
+  background-color: #ff9900;
+}
+
+.event__list {
+  width: 100%;
+  margin-top: 0;
+  background-color: transparent;
+  padding: 0;
 }
 
 .event__block {
@@ -4241,7 +4310,7 @@ p.phone-form-note a {
   display: flex;
 }
 
-.event__discription {
+.event__description {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 72.5%;
@@ -4249,14 +4318,44 @@ p.phone-form-note a {
   padding-right: 43px;
 }
 
-.event__discription-header {
+.event__description-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 13px 11px;
 }
 
-.event__discription-photo {
+.event__description-list-block {
+  width: 100%;
+}
+
+.event__description-list-block .event__description-header {
+  background-color: #f4f5f7;
+  padding: 40px 0;
+}
+
+.event__description-list-block .event__description-photo {
+  width: 80px;
+  height: 80px;
+}
+
+.event__description-list-block .event__description-photo span {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.event__description-list-block .event__title {
+  padding-right: 60px;
+}
+
+.event__description-list-item {
+  padding: 0 60px 60px;
+  margin-bottom: 40px;
+  background-color: #ffffff;
+}
+
+.event__description-photo {
   width: 65px;
   height: 65px;
   background-color: #000000;
@@ -4266,13 +4365,13 @@ p.phone-form-note a {
   display: flex;
 }
 
-.event__discription-photo span {
+.event__description-photo span {
   display: block;
   color: #ffffff;
   margin: auto;
 }
 
-.event__discription-lead {
+.event__description-lead {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4281,7 +4380,7 @@ p.phone-form-note a {
   padding: 5px 15px;
 }
 
-.event__discription-name {
+.event__description-name {
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
@@ -4290,7 +4389,7 @@ p.phone-form-note a {
   margin: 0;
 }
 
-.event__discription-text {
+.event__description-text {
   color: #000000;
   font-weight: 300;
   font-size: 16px;
@@ -4301,7 +4400,7 @@ p.phone-form-note a {
   margin: 6px 0;
 }
 
-.event__discription-text::after {
+.event__description-text::after {
   position: absolute;
   content: "";
   width: 4px;
@@ -4312,12 +4411,11 @@ p.phone-form-note a {
   right: 9px;
 }
 
-.event__discription-text:last-child::after {
+.event__description-text:last-child::after {
   display: none;
 }
 
-.event__discription-body {
-  opacity: 0.6;
+.event__description-body {
   font-weight: 300;
   font-size: 20px;
   line-height: 30px;
@@ -4325,14 +4423,38 @@ p.phone-form-note a {
   margin-left: 10px;
 }
 
-.event__subscribe {
+.event__info {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.event__info-price {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0;
+}
+
+.event__info-duration {
+  margin: 0;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  color: #a2aabd;
+}
+
+.event__btn {
+  width: 184px;
+}
+
+.choose-date {
   width: 42.5%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-left: 45px;
 }
 
-.event__subscribe form {
+.choose-date form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4344,7 +4466,7 @@ p.phone-form-note a {
   padding-top: 20px;
 }
 
-.event__subscribe form p {
+.choose-date form p {
   font-weight: 300;
   font-size: 18px;
   line-height: 25px;
@@ -4354,11 +4476,11 @@ p.phone-form-note a {
   margin-bottom: 26px;
 }
 
-.event__subscribe input {
+.choose-date input {
   display: none;
 }
 
-.event__subscribe label {
+.choose-date label {
   width: 173px;
   height: 53px;
   border: 1px solid #e1e4ea;
@@ -4378,16 +4500,16 @@ p.phone-form-note a {
   margin-bottom: 16px;
 }
 
-.event__subscribe label::nth-of-type(odd) {
+.choose-date label::nth-of-type(odd) {
   margin-right: 9px;
 }
 
-.event__subscribe label span.date {
+.choose-date label span.date {
   position: relative;
   padding-right: 23px;
 }
 
-.event__subscribe label span.date::after {
+.choose-date label span.date::after {
   position: absolute;
   content: "";
   width: 4px;
@@ -4398,8 +4520,41 @@ p.phone-form-note a {
   right: 9px;
 }
 
-.event__subscribe input:checked + label {
+.choose-date input:checked + label {
   border: 1px solid #3773e0;
+}
+
+.choose-date--full-page {
+  width: 100%;
+  padding-left: 0;
+}
+
+.choose-date--full-page form {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.choose-date--full-page label {
+  margin-right: 10px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 15px 22px;
+  width: auto;
+  height: 60px;
+  color: #a2aabd;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  margin-bottom: 41px;
+  cursor: pointer;
+}
+
+.choose-date--full-page input:checked + label {
+  background-color: rgba(55, 115, 224, 0.1);
+  border-color: transparent;
+  color: #3773e0;
+  pointer-events: none;
 }
 
 .subscribe-popup {
@@ -5083,4 +5238,40 @@ p.phone-form-note a {
 
 .documents__list-item svg {
   margin-right: 13px;
+}
+
+.events-list {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.personal-data input {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.personal-data input:focus {
+  border-bottom: 1px solid #3773e0;
+}
+
+.personal-data .main-form__field:first-child {
+  height: 60px;
+}
+
+.personal-data .main-form__field:first-child input {
+  margin-top: 20px;
+}
+
+.personal-data__btn {
+  margin-top: 60px;
+}
+
+.personal-data__text {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.personal-data__account {
+  margin-top: 76px;
 }

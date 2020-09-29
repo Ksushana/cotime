@@ -1,0 +1,49 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Список событий';
+  - let isEvent = true;
+
+block content
+  .container.container--event
+    h1.visually-hidden #{title}
+
+    .events-list
+      .event.event__list
+        .event__block
+          .event__description-list-block
+            .event__description-header
+              .event__description-photo
+                span AC
+              .event__description-lead
+                p.event__description-name Екатерина Пылаева
+                p.event__description-text GLP Feedback
+                p.event__description-text GLP Feedback
+            .event__description-list
+              .event__description-list-item
+                h2.event__title.purple
+                  span Встреча с консультантом по развитию
+                .event__description-body
+                  form.personal-data(action="post")
+                    p.personal-data__text Запись на 25 июня, 19:00 (цена – 5000 руб.)
+                    .main-form__inputs
+                      .main-form__field.main-form__field--long
+                        input.form__input.main-form__line(type="text" id="name")
+                        label.main-form__field-label( for="name" ) Ваше имя
+                      .main-form__field.main-form__field--long
+                        input.form__input.main-form__line(type="email" id="email")
+                        label.main-form__field-label( for="email" ) Электронная почта
+                    .personal-data__account
+                     p.personal-data__text Данные банковской карты
+                      .main-form__inputs
+                        .main-form__field.main-form__field--long
+                          input.form__input.main-form__line(type="text" id="name")
+                          label.main-form__field-label( for="name" ) Ваше имя
+                        .main-form__field.main-form__field
+                          input.form__input.main-form__line(type="email" id="email")
+                          label.main-form__field-label( for="email" ) Электронная почта
+                        .main-form__field.main-form__field
+                          input.form__input.main-form__line(type="email" id="email")
+                          label.main-form__field-label( for="email" ) Электронная почта
+                    button.blue-btn.personal-data__btn(type="submit") Записаться
+

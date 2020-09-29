@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cotime | Список событий</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/MuseoSansCyrl-300.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/MuseoSansCyrl-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/MuseoSansCyrl-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header is-event">
+    <div class="header__logo"><img src="img/logo.svg" alt="logo" width="108" height="20"></div>
+    <div class="header__links hide"><a class="header__link" href="./prices">Тарифы</a><a class="header__link" href="./faq">Вопросы и ответы</a><a class="header__link" href="./new-event">+ Создать занятие</a></div>
+    <div class="header__account header__account--logged"><a class="header__link header__link--enter" href="">Войти</a><button class="header__account--name" type="button">Maksimova M.</button></div>
+    <div class="header__kebab"></div>
+  </header>
+  <main>
+    <div class="container container--event">
+      <h1 class="visually-hidden">Список событий</h1>
+      <div class="events-list">
+        <div class="event event__list">
+          <div class="event__block">
+            <div class="event__description-list-block">
+              <div class="event__description-header">
+                <div class="event__description-photo"><span>AC</span></div>
+                <div class="event__description-lead">
+                  <p class="event__description-name">Екатерина Пылаева</p>
+                  <p class="event__description-text">GLP Feedback</p>
+                  <p class="event__description-text">GLP Feedback</p>
+                </div>
+              </div>
+              <div class="event__description-list">
+                <div class="event__description-list-item">
+                  <h2 class="event__title purple"><span>Встреча с консультантом по развитию</span></h2>
+                  <div class="event__description-body">
+                    <p>Идея в том, чтобы ощутить детально, как при движении тело создает волну, задействуя все двигательные части, и научиться управлять ею, делая эту волну более амплитудной или совсем незаметной. Для этого надо чтобы все суставы в теле были подвижны во всех возможных направлениях и имели связи друг с другом, причем чем легче и мягче будут связи, тем плавнее будет волна.</p>
+                    <div class="event__info">
+                      <p class="event__info-price">Цена – 5000 рублей</p>
+                      <p class="event__info-duration">Длительность – 2 часа</p>
+                    </div>
+                    <div class="choose-date choose-date--full-page">
+                      <form action="post"><input type="radio" id="24" name="date" value="24" checked><label for="24"><span class="date">24 июня</span><span class="time">20:00</span></label><input type="radio" id="25" name="date" value="25"><label for="25"><span class="date">25 июня</span><span class="time">21:00</span></label><input type="radio" id="26" name="date" value="26"><label for="26"><span class="date">26 июня</span><span class="time">22:00</span></label><button class="blue-btn" type="submit">Записаться</button></form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer is-event">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__logo">© Cotime</div>
+        <div class="footer__links"><a class="footer__link" href="./prices">Тарифы</a><a class="footer__link" href="./faq">Вопросы и ответы</a><a class="footer__link" href="./documents">Документы</a><a class="footer__link footer__link--email" href="mailto:hi@cotime.io"><svg width="19" height="15" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#letter"></use>
+            </svg>hi@cotime.io</a><button class="footer__link" type="button">En</button></div>
+      </div>
+      <div class="footer__note">Мы используем cookies для сбора обезличенных персональных данных. Они помогают настраивать рекламу и анализировать трафик.<br> Оставаясь на сайте, вы соглашаетесь на сбор таких данных.</div>
+      </div>
+  </footer>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>
