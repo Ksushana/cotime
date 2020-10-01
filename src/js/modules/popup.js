@@ -9,3 +9,15 @@ $(".subscribe-popup").dialog({
     });
   },
 });
+
+$(".success-popup").dialog({
+  autoOpen: true,
+  closeText: "Готово",
+  width: 602,
+  modal: true,
+  open: function (event, ui) {
+    jQuery(".ui-widget-overlay").on("click", function () {
+      jQuery(".success-popup").dialog("close");
+    });
+  },
+});

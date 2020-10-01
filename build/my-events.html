@@ -19,7 +19,7 @@
     <div class="header__kebab"></div>
   </header>
   <main>
-    <div class="container container--event">
+    <div class="container container--event container--my-events">
       <h1 class="visually-hidden">Список событий</h1>
       <div class="events-list">
         <div class="event event__list">
@@ -37,26 +37,30 @@
                 <div class="event__description-list-item">
                   <h2 class="event__title purple"><span>Встреча с консультантом по развитию</span></h2>
                   <div class="event__description-body">
-                    <form class="personal-data" action="post">
-                      <p class="personal-data__text">Запись на 25 июня, 19:00 (цена – 5000 руб.)</p>
-                      <div class="main-form__inputs">
-                        <div class="main-form__field main-form__field--long"><input class="form__input main-form__line" type="text" id="name"><label class="main-form__field-label" for="name">Ваше имя</label></div>
-                        <div class="main-form__field main-form__field--long"><input class="form__input main-form__line" type="email" id="email"><label class="main-form__field-label" for="email">Электронная почта</label></div>
-                      </div>
-                      <div class="personal-data__account">
-                        <p class="personal-data__text">Данные банковской карты<div class="main-form__inputs">
-                            <div class="main-form__field main-form__field--long"><input class="form__input main-form__line cc-number" name="credit-number" type="tel" maxlength="19"><label class="main-form__field-label" for="name">Номер карты</label></div>
-                            <div class="main-form__field main-form__field--half"><input class="form__input main-form__line"><label class="main-form__field-label" for="email">Срок действия</label></div>
-                            <div class="main-form__field main-form__field--half"><input class="form__input main-form__line cc-cvc" name="credit-cvc" type="tel" maxlength="4"><label class="main-form__field-label" for="email">CVC/CVV</label></div>
-                          </div>
-                        </p>
-                      </div><button class="blue-btn personal-data__btn" type="submit">Записаться</button>
-                    </form>
+                    <p>Идея в том, чтобы ощутить детально, как при движении тело создает волну, задействуя все двигательные части, и научиться управлять ею, делая эту волну более амплитудной или совсем незаметной. Для этого надо чтобы все суставы в теле были подвижны во всех возможных направлениях и имели связи друг с другом, причем чем легче и мягче будут связи, тем плавнее будет волна.</p>
+                    <div class="event__info">
+                      <p class="event__info-price">Цена – 5000 рублей</p>
+                      <p class="event__info-duration">Длительность – 2 часа</p>
+                    </div>
+                    <div class="choose-date choose-date--full-page">
+                      <form action="post"><input type="radio" id="24" name="date" value="24" checked><label for="24"><span class="date">24 июня</span><span class="time">20:00</span></label><input type="radio" id="25" name="date" value="25"><label for="25"><span class="date">25 июня</span><span class="time">21:00</span></label><input type="radio" id="26" name="date" value="26"><label for="26"><span class="date">26 июня</span><span class="time">22:00</span></label><button class="blue-btn" type="submit">Записаться</button></form>
+                    </div>
+                  </div>
+                </div>
+                <div class="event__description-list-item event__description-list-item--subscribed">
+                  <div class="chosen-event">
+                    <p class="chosen-event__date">Запись на 25 июня, 19:00</p><a class="button-link chosen-event__calendar" href="#">Добавить в календарь</a><button class="button-link chosen-event__cancel" type="button">Отменить</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="success-popup">
+        <div class="success-popup__block">
+          <h2>Готово, вы записались!</h2>
+          <p class="success-popup__text">Мы отправили на pupsoidcorp@gmail.com письмо про занятие и сделали событие в календаре</p>
         </div>
       </div>
     </div>

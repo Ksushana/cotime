@@ -37,13 +37,13 @@ block content
                      p.personal-data__text Данные банковской карты
                       .main-form__inputs
                         .main-form__field.main-form__field--long
-                          input.form__input.main-form__line(type="text" id="name")
-                          label.main-form__field-label( for="name" ) Ваше имя
-                        .main-form__field.main-form__field
-                          input.form__input.main-form__line(type="email" id="email")
-                          label.main-form__field-label( for="email" ) Электронная почта
-                        .main-form__field.main-form__field
-                          input.form__input.main-form__line(type="email" id="email")
-                          label.main-form__field-label( for="email" ) Электронная почта
+                          input.form__input.main-form__line( name="credit-number" class="cc-number" type="tel"  maxlength="19")
+                          label.main-form__field-label( for="name" ) Номер карты
+                        .main-form__field.main-form__field--half
+                          input.form__input.main-form__line(   )
+                          label.main-form__field-label( for="email" ) Срок действия
+                        .main-form__field.main-form__field--half
+                          input.form__input.main-form__line(name="credit-cvc" class="cc-cvc" type="tel"  maxlength="4")
+                          label.main-form__field-label( for="email" ) CVC/CVV
                     button.blue-btn.personal-data__btn(type="submit") Записаться
 

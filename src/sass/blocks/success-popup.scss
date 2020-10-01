@@ -1,0 +1,26 @@
+.success-popup {
+  padding:78px 59px 60px !important;
+  background-color: $color-white;
+  // width: 602px !important;
+
+  &__block {
+    padding-bottom: 127px;
+  }
+
+  h2 {
+    font-weight: 500 !important;
+    font-size: 30px !important;
+    line-height: 40px !important;
+    color: $color-black !important;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    color: $color-text-grey;
+  }
+
+
+}

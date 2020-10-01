@@ -1,0 +1,28 @@
+.chosen-event {
+  display: flex;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: normal;
+
+
+  &__date {
+    margin: 0 12px 0 0;
+
+  }
+
+  &__calendar {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    margin-right: 20px;
+  }
+
+  &__cancel {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    margin-left: auto;
+    color: $color-text-grey;
+    cursor: pointer;
+  }
+}

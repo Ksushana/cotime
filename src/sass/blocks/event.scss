@@ -73,6 +73,7 @@
 
   &__description-header {
     display: flex;
+    flex-wrap: wrap;
     padding: 13px 11px;
 
   }
@@ -104,6 +105,10 @@
     padding: 0 60px 60px;
     margin-bottom: 40px;
     background-color: $color-white;
+
+    &--subscribed {
+      padding: 30px 40px 30px;
+    }
   }
 
   &__description-photo {
