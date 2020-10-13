@@ -9,28 +9,33 @@ html lang="ru"
     link as="font" crossorigin="" href="fonts/MuseoSansCyrl-700.woff2" rel="preload" type="font/woff2" /
     link href="css/style.min.css" rel="stylesheet" /
   body
-    header.header
+    header.header.is-event
       .header__logo
         img alt="logo" height="20" src="img/logo.svg" width="108" /
-      .header__account
-        p Maksimova M.
+      .header__links.hide
+        a.header__link href="./prices"  Тарифы
+        a.header__link href="./faq"  Вопросы и ответы
+        a.header__link href="./new-event"  + Создать занятие
+      .header__account.header__account--logged
+        a.header__link.header__link--enter href=""  Войти
+        button.header__account--name type="button"  Maksimova M.
       .header__kebab
     main
-      .container
+      .container.container--event
         .event
-          h1 Индивидуальное соматическое занятие
+          h1.event__title Индивидуальное соматическое занятие
           .event__block
-            .event__discription
-              .event__discription-header
-                .event__discription-photo
+            .event__description
+              .event__description-header
+                .event__description-photo
                   span AC
-                .event__discription-lead
-                  p.event__discription-name Екатерина Пылаева
-                  p.event__discription-text GLP Feedback
-                  p.event__discription-text GLP Feedback
-              .event__discription-body
+                .event__description-lead
+                  p.event__description-name Екатерина Пылаева
+                  p.event__description-text GLP Feedback
+                  p.event__description-text GLP Feedback
+              .event__description-body
                 p Идея в том, чтобы ощутить детально, как при движении тело создает волну, задействуя все двигательные части, и научиться управлять ею, делая эту волну более амплитудной или совсем незаметной. Для этого надо чтобы все суставы в теле были подвижны во всех возможных направлениях и имели связи друг с другом, причем чем легче и мягче будут связи, тем плавнее будет волна.
-            .event__subscribe
+            .choose-date
               form action="post"
                 input#24 name="date" type="radio" value="24" /
                 label for="24"
@@ -46,7 +51,7 @@ html lang="ru"
                   span.time 19:00
                 p Длительность – 2 часа
                 button.blue-btn type="submit"  Записаться
-      .popup.subscribe-popup.magnificPopup
+      .popup.subscribe-popup
         .subscribe-popup__block
           h2 Поздравляем, занятие создано
           form.subscribe-form method="post"
@@ -60,6 +65,23 @@ html lang="ru"
             p.subscribe-popup__share Отправьте ссылку на адреса электронной почты
             .subscribe-popup__send-link
               input placeholder=("+ Email") type="email" /
-              button.blue-btn disabled="" type="submit"  Отправить
+              button.blue-btn disabled="" type="submit"  Добавить
             .subscribe-form__emails
+    footer.footer.is-event
+      .footer__inner
+        .footer__top
+          .footer__logo © Cotime
+          .footer__links
+            a.footer__link href="./prices"  Тарифы
+            a.footer__link href="./faq"  Вопросы и ответы
+            a.footer__link href="./documents"  Документы
+            a.footer__link.footer__link--email href="mailto:hi@cotime.io"
+              svg aria-hidden="true" height="15" width="19"
+                use xlink:href="img/sprite.svg#letter"
+              | hi@cotime.io
+            button.footer__link type="button"  En
+        .footer__note
+          | Мы используем cookies для сбора обезличенных персональных данных. Они помогают настраивать рекламу и анализировать трафик.
+          br/
+          | Оставаясь на сайте, вы соглашаетесь на сбор таких данных.
     script src="js/script.min.js"

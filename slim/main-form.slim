@@ -9,22 +9,27 @@ html lang="ru"
     link as="font" crossorigin="" href="fonts/MuseoSansCyrl-700.woff2" rel="preload" type="font/woff2" /
     link href="css/style.min.css" rel="stylesheet" /
   body
-    header.header
+    header.header.is-event
       .header__logo
         img alt="logo" height="20" src="img/logo.svg" width="108" /
-      .header__account
-        p Maksimova M.
+      .header__links.hide
+        a.header__link href="./prices"  Тарифы
+        a.header__link href="./faq"  Вопросы и ответы
+        a.header__link href="./new-event"  + Создать занятие
+      .header__account.header__account--logged
+        a.header__link.header__link--enter href=""  Войти
+        button.header__account--name type="button"  Maksimova M.
       .header__kebab
     main
-      .container
+      .container.container--event
         .line.step1
         h1.visually-hidden Форма заявки
         .main-form
           form method="post"
-            textarea.main-form__name placeholder="Название" valign="bottom"
+            textarea.main-form__name placeholder="Название" style=("background-color: rgb(166), 57, 135); color: rgb(255, 255, 255);" valign="bottom"
             .main-form__color
-              input#lila name="color" type="radio" value="lila" /
-              label.lila for="lila"
+              input#lila checked="" name="color" type="radio" value="lila" /
+              label.lila data-text-color="green" for="lila"
               input#violet name="color" type="radio" value="violet" /
               label.violet for="violet"
               input#blue name="color" type="radio" value="blue" /
@@ -38,14 +43,18 @@ html lang="ru"
               input#yellow name="color" type="radio" value="yellow" /
               label.yellow for="yellow"
             .main-form__inputs
-              input.main-form__discription placeholder="Описание" type="text" /
-              input.main-form__link placeholder=("Ссылка на онлайн-занятие") type="text" /
-              .main-form__input.main-form__price-block
-                input#price.main-form__price autocomplete="off" type="text" /
-                label.form-label.price-label for="price"  Цена
-              .main-form__part-input.main-form__input
-                input#max.main-form__participants autocomplete="off" min="1" type="number" /
-                label.form-label for="max"  Максимум участников
+              .main-form__field.main-form__field--long
+                input#discription.form__input.main-form__discription type="text" /
+                label.main-form__field-label for="discription"  Описание
+              .main-form__field.main-form__field--long
+                input#link.form__input.main-form__link type="text" /
+                label.main-form__field-label for="link"  Ссылка (Zoom, Meet)
+              .main-form__input.main-form__price-block.main-form__field
+                input#price.form__input.main-form__price autocomplete="off" type="text" /
+                label.main-form__field-label.price-label for="price"  Цена
+              .main-form__part-input.main-form__input.main-form__field
+                input#max.form__input.main-form__participants autocomplete="off" min="1" type="number" /
+                label.main-form__field-label for="max"  Максимум участников
                 .tooltip.tooltip--hidden
                   p
                     | Групповые занятия доступны с тарифами
@@ -55,43 +64,63 @@ html lang="ru"
                       a href="#"  PRO
                     | Для индивидуальных занятий оформление онлайн-занятия бесплатно .
                   button type="button"  Понятно
-              .main-form__select.main-form__select--big.main-form__input
+              .main-form__select.main-form__select--big.main-form__input.main-form__field
                 select#duration.main-form__duration.custom-select name="duration[]"
+                  option value="0"
                   option value="45"  45 минут
                   option value="1"  1 час
                   option value="2"  2 часа
-                label.form-label for="duration"  Длительность
+                label.main-form__field-label for="duration"  Длительность
             .main-form__dates-block
               template.time
-                .main-form__input
-                  input.timepicker autocomplete="off" placeholder="" type="text" /
-                  label.form-label Время
+                .main-form__input.main-form__field
+                  input.form__input.timepicker autocomplete="off" placeholder="" type="text" /
+                  label.main-form__field-label Время
                   span.close
               template.date
                 .main-form__date
-                  .main-form__input
+                  .main-form__input.main-form__field.main-form__input-date
                     input.datepicker autocomplete="off" type="text" /
-                    label.form-label Дата
+                    label.main-form__field-label Дата
                   .main-form__date-times
-                    .main-form__input
-                      input.timepicker autocomplete="off" placeholder="" type="text" /
-                      label.form-label Время
+                    .main-form__input.main-form__field
+                      input.form__input.timepicker autocomplete="off" placeholder="" type="text" /
+                      label.main-form__field-label Время
                   button.main-form__addtime
               .main-form__dates
                 .main-form__date
-                  .main-form__input
-                    input#date.datepicker autocomplete="off" type="text" /
-                    label.form-label for="date"  Дата
+                  .main-form__input.main-form__field.main-form__input-date
+                    input#date.form__input.datepicker autocomplete="off" type="text" /
+                    label.main-form__field-label for="date"  Дата
                   .main-form__date-times
-                    .main-form__input
-                      input#time.timepicker autocomplete="off" placeholder="" type="text" /
-                      label.form-label for="time"  Время
+                    .main-form__input.main-form__field
+                      input#time.form__input.timepicker autocomplete="off" placeholder="" type="text" /
+                      label.main-form__field-label for="time"  Время
                   button.main-form__addtime
               button.main-form__adddate.button-link Добавить дату
             .main-form__inputs.main-form__inputs--big
-              .main-form__input
-                input#instructor.main-form__instructor type="text" /
-                label.form-label for="instructor"  Имя и фамилия ведущего
-              input.main-form__tags placeholder=("Добавить теги") type="text" /
+              .main-form__input.main-form__field
+                input#instructor.form__input.main-form__instructor type="text" /
+                label.main-form__field-label for="instructor"  Имя и фамилия ведущего
+              .main-form__input.main-form__field
+                input#tags.form__input.main-form__tags type="text" /
+                label.main-form__field-label for="tags"  Добавить теги
             button.blue-btn disabled="" type="submit"  Создать
+    footer.footer.is-event
+      .footer__inner
+        .footer__top
+          .footer__logo © Cotime
+          .footer__links
+            a.footer__link href="./prices"  Тарифы
+            a.footer__link href="./faq"  Вопросы и ответы
+            a.footer__link href="./documents"  Документы
+            a.footer__link.footer__link--email href="mailto:hi@cotime.io"
+              svg aria-hidden="true" height="15" width="19"
+                use xlink:href="img/sprite.svg#letter"
+              | hi@cotime.io
+            button.footer__link type="button"  En
+        .footer__note
+          | Мы используем cookies для сбора обезличенных персональных данных. Они помогают настраивать рекламу и анализировать трафик.
+          br/
+          | Оставаясь на сайте, вы соглашаетесь на сбор таких данных.
     script src="js/script.min.js"

@@ -9,30 +9,52 @@ html lang="ru"
     link as="font" crossorigin="" href="fonts/MuseoSansCyrl-700.woff2" rel="preload" type="font/woff2" /
     link href="css/style.min.css" rel="stylesheet" /
   body
-    header.header
+    header.header.is-event
       .header__logo
         img alt="logo" height="20" src="img/logo.svg" width="108" /
-      .header__account
-        p Maksimova M.
+      .header__links.hide
+        a.header__link href="./prices"  Тарифы
+        a.header__link href="./faq"  Вопросы и ответы
+        a.header__link href="./new-event"  + Создать занятие
+      .header__account.header__account--logged
+        a.header__link.header__link--enter href=""  Войти
+        button.header__account--name type="button"  Maksimova M.
       .header__kebab
     main
-      .container
+      .container.container--event
         .line.step2
         form.phone-form.phone-form--code method="post"
           h1 Введите код из СМС
           p Мы отправили 6-значный код на введенный вами номер телефона.
           .phone-form__code
-            input.group-code autofocus="" maxlength="1"  size="1" type="text" /
-            input.group-code maxlength="1"  size="1" type="text" /
-            input.group-code maxlength="1"  size="1" type="text" /
+            input.group-code autofocus="" maxlength="1" size="1" type="text" /
+            input.group-code maxlength="1" size="1" type="text" /
+            input.group-code maxlength="1" size="1" type="text" /
             span –
-            input.group-code maxlength="1"  size="1" type="text" /
-            input.group-code maxlength="1"  size="1" type="text" /
-            input.group-code maxlength="1"  size="1" type="text" /
+            input.group-code maxlength="1" size="1" type="text" /
+            input.group-code maxlength="1" size="1" type="text" /
+            input.group-code maxlength="1" size="1" type="text" /
           button.blue-btn type="submit"  Далее
           button.button-link type="submit"  Отправить на другой номер
           p.phone-form-note
             | Нажимая «Далее», вы подписываете
             a href="#"  договор использования
             | сервиса Cotime
+    footer.footer.is-event
+      .footer__inner
+        .footer__top
+          .footer__logo © Cotime
+          .footer__links
+            a.footer__link href="./prices"  Тарифы
+            a.footer__link href="./faq"  Вопросы и ответы
+            a.footer__link href="./documents"  Документы
+            a.footer__link.footer__link--email href="mailto:hi@cotime.io"
+              svg aria-hidden="true" height="15" width="19"
+                use xlink:href="img/sprite.svg#letter"
+              | hi@cotime.io
+            button.footer__link type="button"  En
+        .footer__note
+          | Мы используем cookies для сбора обезличенных персональных данных. Они помогают настраивать рекламу и анализировать трафик.
+          br/
+          | Оставаясь на сайте, вы соглашаетесь на сбор таких данных.
     script src="js/script.min.js"

@@ -1,0 +1,81 @@
+doctype html
+html lang="ru"
+  head
+    meta charset="UTF-8" /
+    title Cotime | Список событий
+    meta content="width=device-width, initial-scale=1.0" name="viewport" /
+    link as="font" crossorigin="" href="fonts/MuseoSansCyrl-300.woff2" rel="preload" type="font/woff2" /
+    link as="font" crossorigin="" href="fonts/MuseoSansCyrl-500.woff2" rel="preload" type="font/woff2" /
+    link as="font" crossorigin="" href="fonts/MuseoSansCyrl-700.woff2" rel="preload" type="font/woff2" /
+    link href="css/style.min.css" rel="stylesheet" /
+  body
+    header.header.is-event
+      .header__logo
+        img alt="logo" height="20" src="img/logo.svg" width="108" /
+      .header__links.hide
+        a.header__link href="./prices"  Тарифы
+        a.header__link href="./faq"  Вопросы и ответы
+        a.header__link href="./new-event"  + Создать занятие
+      .header__account.header__account--logged
+        a.header__link.header__link--enter href=""  Войти
+        button.header__account--name type="button"  Maksimova M.
+      .header__kebab
+    main
+      .container.container--event
+        h1.visually-hidden Список событий
+        .events-list
+          .event.event__list
+            .event__block
+              .event__description-list-block
+                .event__description-header
+                  .event__description-photo
+                    span AC
+                  .event__description-lead
+                    p.event__description-name Екатерина Пылаева
+                    p.event__description-text GLP Feedback
+                    p.event__description-text GLP Feedback
+                .event__description-list
+                  .event__description-list-item
+                    h2.event__title.purple
+                      span Встреча с консультантом по развитию
+                    .event__description-body
+                      form.personal-data action="post"
+                        p.personal-data__text Запись на 25 июня, 19:00 (цена – 5000 руб.)
+                        .main-form__inputs
+                          .main-form__field.main-form__field--long
+                            input#name.form__input.main-form__line type="text" /
+                            label.main-form__field-label for="name"  Ваше имя
+                          .main-form__field.main-form__field--long
+                            input#email.form__input.main-form__line type="email" /
+                            label.main-form__field-label for="email"  Электронная почта
+                        .personal-data__account
+                          p.personal-data__text Данные банковской карты
+                          .main-form__inputs
+                            .main-form__field.main-form__field--long
+                              input.form__input.main-form__line.cc-number maxlength="19" name="credit-number" type="tel" /
+                              label.main-form__field-label for="name"  Номер карты
+                            .main-form__field.main-form__field--half
+                              input.form__input.main-form__line/
+                              label.main-form__field-label for="email"  Срок действия
+                            .main-form__field.main-form__field--half
+                              input.form__input.main-form__line.cc-cvc maxlength="4" name="credit-cvc" type="tel" /
+                              label.main-form__field-label for="email"  CVC/CVV
+                        button.blue-btn.personal-data__btn type="submit"  Записаться
+    footer.footer.is-event
+      .footer__inner
+        .footer__top
+          .footer__logo © Cotime
+          .footer__links
+            a.footer__link href="./prices"  Тарифы
+            a.footer__link href="./faq"  Вопросы и ответы
+            a.footer__link href="./documents"  Документы
+            a.footer__link.footer__link--email href="mailto:hi@cotime.io"
+              svg aria-hidden="true" height="15" width="19"
+                use xlink:href="img/sprite.svg#letter"
+              | hi@cotime.io
+            button.footer__link type="button"  En
+        .footer__note
+          | Мы используем cookies для сбора обезличенных персональных данных. Они помогают настраивать рекламу и анализировать трафик.
+          br/
+          | Оставаясь на сайте, вы соглашаетесь на сбор таких данных.
+    script src="js/script.min.js"

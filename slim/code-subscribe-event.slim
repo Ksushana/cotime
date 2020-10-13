@@ -2,7 +2,7 @@ doctype html
 html lang="ru"
   head
     meta charset="UTF-8" /
-    title Cotime | Введите номер телефона
+    title Cotime | Введите код из СМС
     meta content="width=device-width, initial-scale=1.0" name="viewport" /
     link as="font" crossorigin="" href="fonts/MuseoSansCyrl-300.woff2" rel="preload" type="font/woff2" /
     link as="font" crossorigin="" href="fonts/MuseoSansCyrl-500.woff2" rel="preload" type="font/woff2" /
@@ -22,13 +22,16 @@ html lang="ru"
       .header__kebab
     main
       .container.container--event
-        .line.step2
-        form.phone-form method="post"
-          h1 Введите номер телефона
-          p Этот номер нужен для регистрации аккаунта. Мы не покажем его в анонсе занятия.
-          input#phone placeholder="+7" type="tel" /
-          button.blue-btn disabled="" type="submit"  Далее
-          button.button-link type="submit"  Назад
+        form.phone-form.phone-form--code.phone-form--code-subscribe method="post"
+          h1 Введите код из СМС
+          .phone-form__code.phone-form__code--subscribe
+            input.group-code autofocus="" maxlength="1" size="1" type="text" /
+            input.group-code maxlength="1" size="1" type="text" /
+            input.group-code maxlength="1" size="1" type="text" /
+            input.group-code maxlength="1" size="1" type="text" /
+          p.phone-form__send-again Отправить еще раз через 23 с
+          button.blue-btn type="submit"  Далее
+          button.button-link type="submit"  Отправить на другой номер
     footer.footer.is-event
       .footer__inner
         .footer__top
